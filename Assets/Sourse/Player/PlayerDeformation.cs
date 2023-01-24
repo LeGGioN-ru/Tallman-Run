@@ -19,19 +19,19 @@ public class PlayerDeformation : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.W))
-            AddWidth(20);
+            ChangeWidth(20);
 
         if (Input.GetKeyDown(KeyCode.H))
-            AddHeight(20);
+            ChangeHeight(20);
     }
 
-    public void AddWidth(int value)
+    public void ChangeWidth(int value)
     {
         _width += value;
         _deformationMaterial.material.SetFloat("_PushValue", _width * _widthMultiplier);
     }
 
-    private void AddHeight(int value)
+    public void ChangeHeight(int value)
     {
         _height += value;
         _collider.transform.localScale = new Vector3(1, _yScaleCollider + _height * _heightMultiplier * _heightColliderMultiplier, 1);
