@@ -1,8 +1,29 @@
-using static Gate;
+using UnityEngine;
 
-public static class DeformationChanger
+public class DeformationChanger : MonoBehaviour
 {
-    public static void ChangePlayerDeformation(PlayerDeformation playerDeformation, DirectionDeformation directionDeformation, int value)
+    public enum DirectionDeformation
+    {
+        Width,
+        Height
+    }
+
+    [SerializeField] private int _valueDeformationChange;
+    [SerializeField] private DirectionDeformation _directionDeformationChange;
+
+    public int ValueDeformationChange => _valueDeformationChange;
+    public DirectionDeformation Direction => _directionDeformationChange;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.TryGetComponent(out PlayerDeformation playerDeformation))
+        {
+            ChangePlayerDeformation(playerDeformation, _directionDeformationChange, _valueDeformationChange);
+            gameObject.SetActive(false);
+        }
+    }
+
+    private void ChangePlayerDeformation(PlayerDeformation playerDeformation, DirectionDeformation directionDeformation, int value)
     {
         if (directionDeformation == DirectionDeformation.Width)
             playerDeformation.ChangeWidth(value);

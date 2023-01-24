@@ -68,16 +68,16 @@ public class GateView : MonoBehaviour
     {
         if (_isPositiveOrZeroValue)
         {
-            if (_gate.Direction == Gate.DirectionDeformation.Height)
+            if (_gate.Direction == DeformationChanger.DirectionDeformation.Height)
                 _positiveHeightArrows.gameObject.SetActive(true);
-            else if (_gate.Direction == Gate.DirectionDeformation.Width)
+            else if (_gate.Direction == DeformationChanger.DirectionDeformation.Width)
                 _positiveWidthArrows.gameObject.SetActive(true);
         }
         else
         {
-            if (_gate.Direction == Gate.DirectionDeformation.Height)
+            if (_gate.Direction == DeformationChanger.DirectionDeformation.Height)
                 _negativeHeightArrows.gameObject.SetActive(true);
-            else if (_gate.Direction == Gate.DirectionDeformation.Width)
+            else if (_gate.Direction == DeformationChanger.DirectionDeformation.Width)
                 _negativeWidthArrows.gameObject.SetActive(true);
         }
     }

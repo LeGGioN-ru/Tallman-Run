@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class DeformationPickupMover : MonoBehaviour
@@ -8,12 +7,6 @@ public class DeformationPickupMover : MonoBehaviour
     [SerializeField] private Vector3 _rotation;
 
     private int _currentMovePoint;
-    private WaitForEndOfFrame _delay;
-
-    private void Start()
-    {
-        _delay = new WaitForEndOfFrame();
-    }
 
     private void Update()
     {
