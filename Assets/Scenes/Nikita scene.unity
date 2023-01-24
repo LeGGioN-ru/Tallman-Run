@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!137 &119570833 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 5560732405548995687, guid: a7a1b8156ac4d734189510481a1f4e8b, type: 3}
-  m_PrefabInstance: {fileID: 331455241}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &331455241
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -135,10 +130,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 331455244, guid: a7a1b8156ac4d734189510481a1f4e8b, type: 3}
-      propertyPath: _collider
-      value: 
-      objectReference: {fileID: 989719678}
     - target: {fileID: 5560732405537495307, guid: a7a1b8156ac4d734189510481a1f4e8b, type: 3}
       propertyPath: m_Name
       value: Stickman_sphere_ working
@@ -187,14 +178,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 331455244, guid: a7a1b8156ac4d734189510481a1f4e8b, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7a1b8156ac4d734189510481a1f4e8b, type: 3}
---- !u!4 &331455246 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5560732405537916267, guid: a7a1b8156ac4d734189510481a1f4e8b, type: 3}
-  m_PrefabInstance: {fileID: 331455241}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &420772352
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,91 +366,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &952064749 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5560732405537916271, guid: a7a1b8156ac4d734189510481a1f4e8b, type: 3}
-  m_PrefabInstance: {fileID: 331455241}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &989719676
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 989719677}
-  - component: {fileID: 989719678}
-  - component: {fileID: 989719679}
-  - component: {fileID: 989719680}
-  m_Layer: 0
-  m_Name: Collider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &989719677
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 989719676}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 331455246}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &989719678
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 989719676}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5056515
-  m_Height: 1.8702178
-  m_Direction: 1
-  m_Center: {x: -0.005651474, y: 0.91155744, z: 0}
---- !u!54 &989719679
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 989719676}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &989719680
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 989719676}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c23e5d3ddffadd94199cb73c3b78348b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deformationMaterial: {fileID: 119570833}
-  _topSpine: {fileID: 1875902945}
-  _botSpine: {fileID: 952064749}
-  _collider: {fileID: 989719678}
 --- !u!1 &1001281076
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,8 +538,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc51dee6baf064f41b5bd0ddbc6b9fb1, type: 3}
---- !u!4 &1875902945 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5560732405537916275, guid: a7a1b8156ac4d734189510481a1f4e8b, type: 3}
-  m_PrefabInstance: {fileID: 331455241}
-  m_PrefabAsset: {fileID: 0}

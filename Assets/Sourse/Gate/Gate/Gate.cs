@@ -18,16 +18,8 @@ public class Gate : MonoBehaviour
     {
         if (other.TryGetComponent(out PlayerDeformation playerDeformation))
         {
-            ChangePlayerDeformation(playerDeformation);
+            DeformationChanger.ChangePlayerDeformation(playerDeformation, _directionDeformationChange, _valueDeformationChange);
             gameObject.SetActive(false);
         }
-    }
-
-    private void ChangePlayerDeformation(PlayerDeformation playerDeformation)
-    {
-        if (_directionDeformationChange == DirectionDeformation.Width)
-            playerDeformation.ChangeWidth(_valueDeformationChange);
-        else if (_directionDeformationChange == DirectionDeformation.Height)
-            playerDeformation.ChangeHeight(_valueDeformationChange);
     }
 }
