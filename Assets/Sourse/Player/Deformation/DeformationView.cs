@@ -11,6 +11,7 @@ public class DeformationView : MonoBehaviour
     private Color _startColor;
     private float _time;
     private readonly float _borderColorChange = 0.9f;
+    private Coroutine _coroutine;
 
     private void Awake()
     {
@@ -29,10 +30,13 @@ public class DeformationView : MonoBehaviour
 
     private void OnDeformated(int value)
     {
+        if (_coroutine != null)
+            return;
+
         if (value >= 0)
-            StartCoroutine(BlickColor(_addValueColor));
+            _coroutine = StartCoroutine(BlickColor(_addValueColor));
         else
-            StartCoroutine(BlickColor(_reduceValueColor));
+            _coroutine = StartCoroutine(BlickColor(_reduceValueColor));
     }
 
     private IEnumerator BlickColor(Color color)
@@ -54,5 +58,6 @@ public class DeformationView : MonoBehaviour
         }
 
         _time = 0;
+        _coroutine = null;
     }
 }
