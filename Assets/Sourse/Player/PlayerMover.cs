@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerMover : MonoBehaviour
 {
     [SerializeField] private float _speed;
+    [SerializeField] private float _rotationSpeed;
     [SerializeField] private float _leftGroundBorder;
     [SerializeField] private float _rightGroundBorder;
     [SerializeField] private float _eulerYMin;
@@ -35,7 +36,7 @@ public class PlayerMover : MonoBehaviour
         float deltaX = Input.mousePosition.x - _oldMousePositionX;
         _oldMousePositionX = Input.mousePosition.x;
 
-        _eulerY += deltaX;
+        _eulerY += deltaX * _rotationSpeed;
         _eulerY = Mathf.Clamp(_eulerY, _eulerYMin, _eulerYMax);
         transform.eulerAngles = new Vector3(0, _eulerY, 0);
     }
