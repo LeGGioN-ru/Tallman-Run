@@ -98,4 +98,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _valueDeformationChange: 0
   _directionDeformationChange: 0
-  _particles: {fileID: 0}
+  _particles: {fileID: 2433282508523890284, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312, type: 3}
