@@ -14,12 +14,17 @@ public class DeformationChanger : MonoBehaviour
     public int ValueDeformationChange => _valueDeformationChange;
     public DirectionDeformation Direction => _directionDeformationChange;
 
+    protected virtual void OnPlayerTouch()
+    {
+        gameObject.SetActive(false);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent(out PlayerDeformation playerDeformation))
         {
             ChangePlayerDeformation(playerDeformation, _directionDeformationChange, _valueDeformationChange);
-            gameObject.SetActive(false);
+            OnPlayerTouch();
         }
     }
 
