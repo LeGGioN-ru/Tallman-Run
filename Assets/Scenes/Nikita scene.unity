@@ -136,7 +136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5560732405537916267, guid: a7a1b8156ac4d734189510481a1f4e8b, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5560732405537916267, guid: a7a1b8156ac4d734189510481a1f4e8b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -180,6 +180,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7a1b8156ac4d734189510481a1f4e8b, type: 3}
+--- !u!1 &331455242 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 989719676, guid: a7a1b8156ac4d734189510481a1f4e8b, type: 3}
+  m_PrefabInstance: {fileID: 331455241}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &331455243 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 989719680, guid: a7a1b8156ac4d734189510481a1f4e8b, type: 3}
+  m_PrefabInstance: {fileID: 331455241}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331455242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c23e5d3ddffadd94199cb73c3b78348b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &331455244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331455242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcfa17c2e0127ff4fa465c51fdb9e102, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerDeformation: {fileID: 331455243}
+  _addValueColor: {r: 0.079197526, g: 1, b: 0, a: 1}
+  _reduceValueColor: {r: 1, g: 0.8759049, b: 0, a: 1}
+  _lerpTime: 4
 --- !u!1 &420772352
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,7 +522,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4357112064253844824, guid: bc51dee6baf064f41b5bd0ddbc6b9fb1, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4357112064253844824, guid: bc51dee6baf064f41b5bd0ddbc6b9fb1, type: 3}
       propertyPath: m_LocalPosition.x

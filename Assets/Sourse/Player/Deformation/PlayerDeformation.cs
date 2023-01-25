@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using static DeformationChanger;
 
 public class PlayerDeformation : MonoBehaviour
 {
@@ -7,9 +9,12 @@ public class PlayerDeformation : MonoBehaviour
     [SerializeField] private Transform _botSpine;
     [SerializeField] private CapsuleCollider _collider;
 
+    public Renderer DeformationMaterial => _deformationMaterial;
+
+    public event Action<int> Deformated;
+
     private int _width;
     private int _height;
-
     private readonly float _additionalHeightOffset = 0.17f;
     private readonly float _widthMultiplier = 0.0005f;
     private readonly float _heightMultiplier = 0.01f;
@@ -25,13 +30,23 @@ public class PlayerDeformation : MonoBehaviour
             ChangeHeight(20);
     }
 
-    public void ChangeWidth(int value)
+    public void Execute(DirectionDeformation directionDeformation, int value)
+    {
+        Deformated?.Invoke(value);
+
+        if (directionDeformation == DirectionDeformation.Width)
+            ChangeWidth(value);
+        else if (directionDeformation == DirectionDeformation.Height)
+            ChangeHeight(value);
+    }
+
+    private void ChangeWidth(int value)
     {
         _width += value;
         _deformationMaterial.material.SetFloat("_PushValue", _width * _widthMultiplier);
     }
 
-    public void ChangeHeight(int value)
+    private void ChangeHeight(int value)
     {
         _height += value;
         _collider.transform.localScale = new Vector3(1, _yScaleCollider + _height * _heightMultiplier * _heightColliderMultiplier, 1);
