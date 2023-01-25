@@ -640,6 +640,7 @@ GameObject:
   - component: {fileID: 651152461}
   - component: {fileID: 651152460}
   - component: {fileID: 651152463}
+  - component: {fileID: 651152464}
   m_Layer: 0
   m_Name: JumpPanel
   m_TagString: Untagged
@@ -706,11 +707,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 963cb10e6a7d5e64ba7adc358d8a75d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bezier: {fileID: 1279442533}
   _point1: {fileID: 887077378}
   _point2: {fileID: 1668279960}
   _point3: {fileID: 1642380910}
   _point4: {fileID: 119484630}
+  _bezier: {fileID: 651152464}
+--- !u!114 &651152464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651152459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f6f4f91f8157a749be2cc748229ff63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &688967282
 GameObject:
   m_ObjectHideFlags: 0
@@ -1754,7 +1767,6 @@ GameObject:
   - component: {fileID: 1279442529}
   - component: {fileID: 1279442530}
   - component: {fileID: 1279442531}
-  - component: {fileID: 1279442533}
   - component: {fileID: 1279442532}
   m_Layer: 0
   m_Name: Player
@@ -1858,18 +1870,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89b1b15ca18f4984b9c4eb69aa586a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1279442533
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1279442525}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f6f4f91f8157a749be2cc748229ff63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1374705390
