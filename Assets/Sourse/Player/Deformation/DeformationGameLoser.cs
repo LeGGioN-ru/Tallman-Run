@@ -3,6 +3,10 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerDeformation))]
 public class DeformationGameLoser : MonoBehaviour
 {
+    [SerializeField] private PlayerMover _playerMover;
+    [SerializeField] private MoveAnimationsController _moveAnimationsController;
+    [SerializeField] private Animator _animator;
+
     private PlayerDeformation _playerDeformation;
 
     private void Awake()
@@ -23,6 +27,15 @@ public class DeformationGameLoser : MonoBehaviour
     private void OnDeformated(int value)
     {
         if (_playerDeformation.Width < 0 || _playerDeformation.Height < 0)
-            Debug.Log("lose");
+        {
+            DisableMove();
+            _animator.Play(PlayerAnimationsController.States.Death);
+        }
+    }
+
+    private void DisableMove()
+    {
+        _playerMover.enabled = false;
+        _moveAnimationsController.enabled = false;
     }
 }

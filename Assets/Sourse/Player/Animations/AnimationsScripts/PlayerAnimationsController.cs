@@ -1,4 +1,4 @@
-public class PlayerAnimationsController 
+public class PlayerAnimationsController
 {
     public static class Params
     {
@@ -8,5 +8,6 @@ public class PlayerAnimationsController
     public static class States
     {
         public static string Running = nameof(Running);
+        public static string Death = nameof(Death);
     }
 }
