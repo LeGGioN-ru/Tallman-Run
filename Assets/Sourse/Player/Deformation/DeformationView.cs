@@ -1,13 +1,14 @@
 using System.Collections;
 using UnityEngine;
 
+[RequireComponent(typeof(PlayerDeformation))]
 public class DeformationView : MonoBehaviour
 {
-    [SerializeField] private PlayerDeformation _playerDeformation;
     [SerializeField] private Color _addValueColor;
     [SerializeField] private Color _reduceValueColor;
     [SerializeField] private float _lerpTime;
 
+    private PlayerDeformation _playerDeformation;
     private Color _startColor;
     private float _time;
     private readonly float _borderColorChange = 0.9f;
@@ -15,6 +16,7 @@ public class DeformationView : MonoBehaviour
 
     private void Awake()
     {
+        _playerDeformation = GetComponent<PlayerDeformation>();
         _startColor = _playerDeformation.DeformationMaterial.material.color;
     }
 

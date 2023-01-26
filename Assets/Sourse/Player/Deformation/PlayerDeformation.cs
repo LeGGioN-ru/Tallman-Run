@@ -10,6 +10,8 @@ public class PlayerDeformation : MonoBehaviour
     [SerializeField] private CapsuleCollider _collider;
 
     public Renderer DeformationMaterial => _deformationMaterial;
+    public int Width => _width;
+    public int Height => _height;
 
     public event Action<int> Deformated;
 
@@ -23,22 +25,22 @@ public class PlayerDeformation : MonoBehaviour
 
     public void Execute(DirectionDeformation directionDeformation, int value)
     {
-        Deformated?.Invoke(value);
-
         if (directionDeformation == DirectionDeformation.Width)
             ChangeWidth(value);
         else if (directionDeformation == DirectionDeformation.Height)
             ChangeHeight(value);
+
+        Deformated?.Invoke(value);
     }
 
     public void Execute(int value)
     {
-        Deformated?.Invoke(value);
-
         if (_height > 0)
             ChangeHeight(value);
         else if (_width > 0)
             ChangeWidth(value);
+
+        Deformated?.Invoke(value);
     }
 
     private void ChangeWidth(int value)
