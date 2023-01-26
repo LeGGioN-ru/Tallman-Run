@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(PlayerDeformation))]
-public class DeformationView : MonoBehaviour
+public class DeformationColorView : MonoBehaviour
 {
     [SerializeField] private Color _addValueColor;
     [SerializeField] private Color _reduceValueColor;

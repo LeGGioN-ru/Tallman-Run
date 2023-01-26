@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using static DeformationChanger;
+using static UnityEngine.Rendering.DebugUI;
 
 public class PlayerDeformation : MonoBehaviour
 {
@@ -17,8 +18,6 @@ public class PlayerDeformation : MonoBehaviour
 
     public event Action<int> Deformated;
 
-    private Coroutine _growWidth;
-    private Coroutine _growHeight;
     private float _width;
     private float _height;
     private float _endValueWidth;
@@ -49,50 +48,57 @@ public class PlayerDeformation : MonoBehaviour
         Deformated?.Invoke(value);
     }
 
+    public void UpgradeWidth(int value)
+    {
+        _width += value;
+        StartCoroutine(GrowWidth(value));
+    }
+
+    public void UpgradeHeight(int value)
+    {
+        _height += value;
+        StartCoroutine(GrowHeight(value));
+    }
+
     private void ChangeWidth(int value)
     {
-        ChangeEndValue(ref _endValueWidth, _width, value);
-
-        _growWidth = null;
-        _growWidth = StartCoroutine(GrowWidth(_endValueWidth));
+        StartCoroutine(GrowWidth(value));
 
         _deformationMaterial.material.SetFloat("_PushValue", _width * _widthMultiplier);
     }
 
     private void ChangeHeight(int value)
     {
-        ChangeEndValue(ref _endValueHeight, _height, value);
-
-        _growHeight = null;
-        _growHeight = StartCoroutine(GrowHeight(_endValueHeight));
+        StartCoroutine(GrowHeight(value));
 
         _collider.transform.localScale = new Vector3(1, _yScaleCollider + _height * _heightMultiplier * _heightColliderMultiplier, 1);
         _topSpine.position = _botSpine.position + new Vector3(0, _height * _heightMultiplier + _additionalHeightOffset, 0);
     }
 
-    private void ChangeEndValue(ref float endValue, float startValue, int addValue)
+    private void ChangeEndValueDefromation(ref float endValue, float startValue, float addValue)
     {
-        if (endValue < startValue)
-            endValue = startValue + addValue;
-        else
-            endValue += addValue;
+        endValue += addValue;
     }
 
-    private IEnumerator GrowWidth(float endValue)
+    private IEnumerator GrowWidth(float addValue)
     {
-        while (_width != endValue - 0.9f)
+        ChangeEndValueDefromation(ref _endValueWidth, _width, addValue);
+
+        while (_width != _endValueWidth)
         {
-            _width = Mathf.Lerp(_width, endValue, _deformationSpeed * Time.deltaTime);
+            _width = Mathf.MoveTowards(_width, _endValueWidth, _deformationSpeed * Time.deltaTime);
             _deformationMaterial.material.SetFloat("_PushValue", _width * _widthMultiplier);
             yield return null;
         }
     }
 
-    private IEnumerator GrowHeight(float endValue)
+    private IEnumerator GrowHeight(float addValue)
     {
-        while (_height != endValue - 0.9f)
+        ChangeEndValueDefromation(ref _endValueHeight, _height, addValue);
+
+        while (_height != _endValueHeight)
         {
-            _height = Mathf.Lerp(_height, endValue, _deformationSpeed * Time.deltaTime);
+            _height = Mathf.MoveTowards(_height, _endValueHeight, _deformationSpeed * Time.deltaTime);
             _collider.transform.localScale = new Vector3(1, _yScaleCollider + _height * _heightMultiplier * _heightColliderMultiplier, 1);
             _topSpine.position = _botSpine.position + new Vector3(0, _height * _heightMultiplier + _additionalHeightOffset, 0);
             yield return null;
