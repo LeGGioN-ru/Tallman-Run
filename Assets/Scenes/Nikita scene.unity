@@ -1989,6 +1989,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1374705390}
   m_CullTransparentMesh: 1
+--- !u!1 &1539990994 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3654507033652842132, guid: 450a1ce05c29d8b43b7a529ff50e5a44, type: 3}
+  m_PrefabInstance: {fileID: 3654507033234399900}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1539991000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539990994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74868be0533eae243ab4c4e7be4ee1aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1652887260
 GameObject:
   m_ObjectHideFlags: 0
@@ -2364,6 +2381,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4861746112127688492, guid: efb7c844289c63044abc9fcb83475096, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5286810625164384837, guid: efb7c844289c63044abc9fcb83475096, type: 3}
       propertyPath: _valueDeformationChange
       value: -75
@@ -2427,6 +2448,10 @@ PrefabInstance:
     - target: {fileID: 8165041713559252188, guid: efb7c844289c63044abc9fcb83475096, type: 3}
       propertyPath: m_Name
       value: Gate (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646893021078084624, guid: efb7c844289c63044abc9fcb83475096, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efb7c844289c63044abc9fcb83475096, type: 3}
@@ -2835,6 +2860,10 @@ PrefabInstance:
       propertyPath: _topSpine
       value: 
       objectReference: {fileID: 5171903802579557989}
+    - target: {fileID: 3654507033652842129, guid: 450a1ce05c29d8b43b7a529ff50e5a44, type: 3}
+      propertyPath: _deformationSpeed
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 450a1ce05c29d8b43b7a529ff50e5a44, type: 3}
 --- !u!4 &5171903802579557989 stripped
@@ -2849,6 +2878,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2511230459467560641, guid: efb7c844289c63044abc9fcb83475096, type: 3}
+      propertyPath: _update
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5286810625164384837, guid: efb7c844289c63044abc9fcb83475096, type: 3}
+      propertyPath: _valueDeformationChange
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5286810625844416698, guid: efb7c844289c63044abc9fcb83475096, type: 3}
+      propertyPath: _valueDeformationChange
+      value: -200
+      objectReference: {fileID: 0}
     - target: {fileID: 6190634797623625231, guid: efb7c844289c63044abc9fcb83475096, type: 3}
       propertyPath: m_RootOrder
       value: 11

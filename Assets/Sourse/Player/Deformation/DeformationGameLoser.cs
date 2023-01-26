@@ -5,6 +5,11 @@ public class DeformationGameLoser : MonoBehaviour
 {
     private PlayerDeformation _playerDeformation;
 
+    private void Awake()
+    {
+        _playerDeformation = GetComponent<PlayerDeformation>();
+    }
+
     private void OnEnable()
     {
         _playerDeformation.Deformated += OnDeformated;
@@ -17,7 +22,7 @@ public class DeformationGameLoser : MonoBehaviour
 
     private void OnDeformated(int value)
     {
-        if (_playerDeformation.Width <= 0 || _playerDeformation.Height <= 0)
+        if (_playerDeformation.Width < 0 || _playerDeformation.Height < 0)
             Debug.Log("lose");
     }
 }
