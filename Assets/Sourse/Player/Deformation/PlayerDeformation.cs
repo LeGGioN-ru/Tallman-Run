@@ -21,15 +21,6 @@ public class PlayerDeformation : MonoBehaviour
     private readonly float _heightColliderMultiplier = 0.55f;
     private readonly float _yScaleCollider = 0.95f;
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.W))
-            ChangeWidth(20);
-
-        if (Input.GetKeyDown(KeyCode.H))
-            ChangeHeight(20);
-    }
-
     public void Execute(DirectionDeformation directionDeformation, int value)
     {
         Deformated?.Invoke(value);
@@ -38,6 +29,16 @@ public class PlayerDeformation : MonoBehaviour
             ChangeWidth(value);
         else if (directionDeformation == DirectionDeformation.Height)
             ChangeHeight(value);
+    }
+
+    public void Execute(int value)
+    {
+        Deformated?.Invoke(value);
+
+        if (_height > 0)
+            ChangeHeight(value);
+        else if (_width > 0)
+            ChangeWidth(value);
     }
 
     private void ChangeWidth(int value)
