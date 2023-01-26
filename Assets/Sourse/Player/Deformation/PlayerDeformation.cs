@@ -20,6 +20,8 @@ public class PlayerDeformation : MonoBehaviour
 
     private float _width;
     private float _height;
+    private float _startWidth;
+    private float _startHeight;
     private float _endValueWidth;
     private float _endValueHeight;
     private readonly float _additionalHeightOffset = 0.17f;
@@ -50,14 +52,20 @@ public class PlayerDeformation : MonoBehaviour
 
     public void UpgradeWidth(int value)
     {
-        _width += value;
         StartCoroutine(GrowWidth(value));
+        _startWidth = _endValueWidth;
     }
 
     public void UpgradeHeight(int value)
     {
-        _height += value;
         StartCoroutine(GrowHeight(value));
+        _startHeight = _endValueHeight;
+    }
+
+    private void LoadDeformation()
+    {
+        StartCoroutine(GrowWidth(_startWidth, false));
+        StartCoroutine(GrowHeight(_startHeight, false));
     }
 
     private void ChangeWidth(int value)
@@ -75,14 +83,17 @@ public class PlayerDeformation : MonoBehaviour
         _topSpine.position = _botSpine.position + new Vector3(0, _height * _heightMultiplier + _additionalHeightOffset, 0);
     }
 
-    private void ChangeEndValueDefromation(ref float endValue, float startValue, float addValue)
+    private void ChangeEndValueDefromation(ref float endValue, float setValue, bool isAdd = true)
     {
-        endValue += addValue;
+        if (isAdd)
+            endValue += setValue;
+        else
+            endValue = setValue;
     }
 
-    private IEnumerator GrowWidth(float addValue)
+    private IEnumerator GrowWidth(float addValue, bool isAdd = true)
     {
-        ChangeEndValueDefromation(ref _endValueWidth, _width, addValue);
+        ChangeEndValueDefromation(ref _endValueWidth, addValue, isAdd);
 
         while (_width != _endValueWidth)
         {
@@ -92,9 +103,9 @@ public class PlayerDeformation : MonoBehaviour
         }
     }
 
-    private IEnumerator GrowHeight(float addValue)
+    private IEnumerator GrowHeight(float addValue, bool isAdd = true)
     {
-        ChangeEndValueDefromation(ref _endValueHeight, _height, addValue);
+        ChangeEndValueDefromation(ref _endValueHeight, addValue, isAdd);
 
         while (_height != _endValueHeight)
         {
