@@ -1,16 +1,16 @@
 using UnityEngine;
 
 [RequireComponent(typeof(BuyButton))]
-[RequireComponent(typeof(HatSetter))]
+[RequireComponent(typeof(SkinSetter))]
 public class BuyButtonView : MonoBehaviour
 {
-    private HatSetter _hatSetter;
+    private SkinSetter _skinSetter;
     private BuyButton _buyButton;
 
     private void Start()
     {
         _buyButton = GetComponent<BuyButton>();
-        _hatSetter =GetComponent<HatSetter>();
+        _skinSetter =GetComponent<SkinSetter>();
     }
 
     public void OnBuyButton()
@@ -18,6 +18,6 @@ public class BuyButtonView : MonoBehaviour
         if(_buyButton.enabled == true)
             _buyButton.Buy();
 
-        _hatSetter.SetHat();
+        _skinSetter.SetSkin();
     }
 }
