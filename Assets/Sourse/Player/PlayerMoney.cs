@@ -3,23 +3,32 @@ using UnityEngine;
 
 public class PlayerMoney : MonoBehaviour
 {
-    private int _moneyCount = 0;
+    [SerializeField] private int _moneyCount = 0;
 
+    public int MoneyCount => _moneyCount;
+
+    public static PlayerMoney Instance;
     public event Action<int> MoneyCountChanged;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Start()
     {
         MoneyCountChanged.Invoke(_moneyCount);
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void CollectCoin()
     {
-        if(other.TryGetComponent(out Coin coin))
-        {
-            _moneyCount++;
-            coin.Collect();
+        _moneyCount++;
+        MoneyCountChanged.Invoke(_moneyCount);
+    }
 
-            MoneyCountChanged.Invoke(_moneyCount);
-        }
+    public void DecreaseMoney(int money)
+    {
+        _moneyCount -= money;
+        MoneyCountChanged.Invoke(_moneyCount);
     }
 }
