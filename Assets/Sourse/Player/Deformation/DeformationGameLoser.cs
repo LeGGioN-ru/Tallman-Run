@@ -3,8 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerDeformation))]
 public class DeformationGameLoser : MonoBehaviour
 {
-    [SerializeField] private PlayerMover _playerMover;
-    [SerializeField] private MoveAnimationsController _moveAnimationsController;
+    [SerializeField] private PlayerBehaviour _playerBehaviour;
     [SerializeField] private Animator _animator;
 
     private PlayerDeformation _playerDeformation;
@@ -35,7 +34,6 @@ public class DeformationGameLoser : MonoBehaviour
 
     private void DisableMove()
     {
-        _playerMover.enabled = false;
-        _moveAnimationsController.enabled = false;
+        _playerBehaviour.Stop();
     }
 }
