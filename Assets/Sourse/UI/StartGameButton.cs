@@ -2,13 +2,12 @@ using UnityEngine;
 
 public class StartGameButton : MonoBehaviour
 {
-    [SerializeField] private PlayerMover _playerMover;
-    [SerializeField] private MoveAnimationsController _moveAnimationsController;
+    [SerializeField] private PlayerBehaviour _playerBehaviour;
 
     public void OnStartGame()
     {
         gameObject.SetActive(false);
-        _playerMover.enabled = true;
-        _moveAnimationsController.enabled = true;
+
+        _playerBehaviour.Play();
     }    
 }
