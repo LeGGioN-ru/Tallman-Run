@@ -2,8 +2,10 @@ using UnityEngine;
 
 public class Fence : Obstacle
 {
-    public override void Destroy()
+    public override void DealDamage(PlayerDeformation playerDeformation)
     {
+        base.DealDamage(playerDeformation);
+
         gameObject.SetActive(false);
     }
 }

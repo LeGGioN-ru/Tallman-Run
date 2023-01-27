@@ -43,7 +43,7 @@ public class PlayerDeformation : MonoBehaviour
     {
         if (_height > 0)
             ChangeHeight(value);
-        else if (_width > 0)
+        else //if (_width > 0)
             ChangeWidth(value);
 
         Deformated?.Invoke(value);

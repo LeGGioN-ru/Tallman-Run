@@ -2,8 +2,10 @@ using UnityEngine;
 
 public class Obstacle : MonoBehaviour
 {
-    public virtual void Destroy()
+    [SerializeField] private int _damage;
+
+    public virtual void DealDamage(PlayerDeformation playerDeformation)
     {
-        
+        playerDeformation.Execute(_damage);
     }
 }
