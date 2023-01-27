@@ -10,5 +10,6 @@ public class PlayerAnimationsController
     {
         public static string Running = nameof(Running);
         public static string Dancing = nameof(Dancing);
+        public static string Death = nameof(Death);
     }
 }
