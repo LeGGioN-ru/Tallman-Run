@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using UnityEngine;
 using static DeformationChanger;
-using static UnityEngine.Rendering.DebugUI;
 
 public class PlayerDeformation : MonoBehaviour
 {
