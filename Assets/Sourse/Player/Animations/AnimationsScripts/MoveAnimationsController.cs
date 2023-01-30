@@ -4,16 +4,30 @@ public class MoveAnimationsController : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
 
-    void Update()
+    private bool isFinish = false;
+
+    private void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(isFinish == false)
+        {
+            if(Input.GetMouseButtonDown(0))
+            {
+                _animator.SetBool(PlayerAnimationsController.Params.Run, true);
+            }
+
+            if(Input.GetMouseButtonUp(0))
+            {
+                _animator.SetBool(PlayerAnimationsController.Params.Run, false);
+            }
+        }
+        else
         {
             _animator.SetBool(PlayerAnimationsController.Params.Run, true);
         }
-
-        if(Input.GetMouseButtonUp(0))
-        {
-            _animator.SetBool(PlayerAnimationsController.Params.Run, false);
-        }
+    }
+    
+    public void StartFinish()
+    {
+        isFinish = true;
     }
 }
