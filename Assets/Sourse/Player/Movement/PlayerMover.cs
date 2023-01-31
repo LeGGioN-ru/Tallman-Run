@@ -40,4 +40,9 @@ public class PlayerMover : MonoBehaviour
         _eulerY = Mathf.Clamp(_eulerY, _eulerYMin, _eulerYMax);
         transform.eulerAngles = new Vector3(0, _eulerY, 0);
     }
+
+    public void IncreaseMoveSpeed(float value)
+    {
+        _speed += value;
+    }
 }
