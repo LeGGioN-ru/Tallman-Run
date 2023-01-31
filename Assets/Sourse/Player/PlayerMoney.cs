@@ -3,9 +3,11 @@ using UnityEngine;
 
 public class PlayerMoney : MonoBehaviour
 {
-    [SerializeField] private int _moneyCount = 0;
+    [SerializeField] private int _allMoney = 0;
+    [SerializeField] private int _moneyCollectedOnLevel = 0;
 
-    public int MoneyCount => _moneyCount;
+    public int AllMoney => _allMoney;
+    public int MomeyCollectedOnLevel => _moneyCollectedOnLevel;
 
     public static PlayerMoney Instance;
     public event Action<int> MoneyCountChanged;
@@ -17,18 +19,20 @@ public class PlayerMoney : MonoBehaviour
 
     private void Start()
     {
-        MoneyCountChanged.Invoke(_moneyCount);
+        MoneyCountChanged.Invoke(_allMoney);
     }
 
     public void CollectCoin()
     {
-        _moneyCount++;
-        MoneyCountChanged.Invoke(_moneyCount);
+        _allMoney++;
+        _moneyCollectedOnLevel++;
+
+        MoneyCountChanged.Invoke(_allMoney);
     }
 
     public void DecreaseMoney(int money)
     {
-        _moneyCount -= money;
-        MoneyCountChanged.Invoke(_moneyCount);
+        _allMoney -= money;
+        MoneyCountChanged.Invoke(_allMoney);
     }
 }
