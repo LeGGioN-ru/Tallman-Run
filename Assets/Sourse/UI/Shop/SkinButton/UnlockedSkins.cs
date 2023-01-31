@@ -8,15 +8,15 @@ public class UnlockedSkins : MonoBehaviour
 
     private List<int> _unlockedButtons = new List<int>();
 
-    public void UnlockHat(int hatIndex)
+    public void UnlockHat(int hatIndex, int buttonIndex)
     {
         _skinChanger.SetNewHat(hatIndex);
-        _unlockedButtons.Add(hatIndex);
+        _unlockedButtons.Add(buttonIndex);
     }
 
-    public void UnlockColor(int colorIndex)
+    public void UnlockColor(int colorIndex, int buttonIndex)
     {
         _skinChanger.SetNewColor(colorIndex);
-        _unlockedButtons.Add(colorIndex);
+        _unlockedButtons.Add(buttonIndex);
     }
 }

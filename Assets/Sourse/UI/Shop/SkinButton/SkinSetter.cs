@@ -13,8 +13,8 @@ public class SkinSetter : MonoBehaviour
     public void SetSkin()
     {
         if (_isHat)
-            _unlockedSkins.UnlockHat(_hatIndex);
+            _unlockedSkins.UnlockHat(_hatIndex, _buttonIndex);
         else
-            _unlockedSkins.UnlockColor(_colorIndex);
+            _unlockedSkins.UnlockColor(_colorIndex, _buttonIndex);
     }
 }
