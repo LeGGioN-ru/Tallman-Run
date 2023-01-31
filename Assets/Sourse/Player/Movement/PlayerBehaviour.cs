@@ -22,6 +22,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     public void Stop()
     {
+        _preFinishMove.enabled = false;
         _playerMover.enabled = false;
         _moveAnimationsController.enabled = false;
     }

@@ -4,6 +4,7 @@ using UnityEngine;
 public class DeformationGameLoser : MonoBehaviour
 {
     [SerializeField] private PlayerBehaviour _playerBehaviour;
+    [SerializeField] private PreFinishMove _preFinishMove;
     [SerializeField] private Animator _animator;
 
     private PlayerDeformation _playerDeformation;
@@ -27,13 +28,8 @@ public class DeformationGameLoser : MonoBehaviour
     {
         if (_playerDeformation.EndWidth < 0 || _playerDeformation.EndHeight < 0)
         {
-            DisableMove();
+            _playerBehaviour.Stop();
             _animator.Play(PlayerAnimationsController.States.Death);
         }
-    }
-
-    private void DisableMove()
-    {
-        _playerBehaviour.Stop();
     }
 }
