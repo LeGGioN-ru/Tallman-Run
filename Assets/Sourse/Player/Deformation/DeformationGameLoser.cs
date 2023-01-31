@@ -25,7 +25,7 @@ public class DeformationGameLoser : MonoBehaviour
 
     private void OnDeformated(int value)
     {
-        if (_playerDeformation.Width < 0 || _playerDeformation.Height < 0)
+        if (_playerDeformation.EndWidth < 0 || _playerDeformation.EndHeight < 0)
         {
             DisableMove();
             _animator.Play(PlayerAnimationsController.States.Death);

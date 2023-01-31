@@ -11,17 +11,17 @@ public class PlayerDeformation : MonoBehaviour
     [SerializeField] private float _deformationSpeed;
 
     public Renderer DeformationMaterial => _deformationMaterial;
-    public float Width => _width;
-    public float Height => _height;
+    public float EndWidth => _endWidth;
+    public float EndHeight => _endHeight;
 
     public event Action<int> Deformated;
 
     private float _startWidth;
     private float _startHeight;
-    private float _width;
-    private float _height;
-    private float _endValueWidth;
-    private float _endValueHeight;
+    private float _currentWidth;
+    private float _currentHeight;
+    private float _endWidth;
+    private float _endHeight;
     private readonly float _additionalHeightOffset = 0.17f;
     private readonly float _widthMultiplier = 0.0005f;
     private readonly float _heightMultiplier = 0.01f;
@@ -30,37 +30,37 @@ public class PlayerDeformation : MonoBehaviour
 
     private void Update()
     {
-        if (_height != _endValueHeight)
+        if (_currentHeight != _endHeight)
             ChangeHeight();
 
-        if (_width != _endValueWidth)
+        if (_currentWidth != _endWidth)
             ChangeWidth();
     }
 
     public void Execute(DirectionDeformation directionDeformation, int value)
     {
         if (directionDeformation == DirectionDeformation.Width)
-            _endValueWidth += value;
+            _endWidth += value;
         else if (directionDeformation == DirectionDeformation.Height)
-            _endValueHeight += value;
+            _endHeight += value;
 
         Deformated?.Invoke(value);
     }
 
     public void Execute(int value)
     {
-        if (_endValueHeight + value > 0)
-            _endValueHeight += value;
+        if (_endHeight + value > 0)
+            _endHeight += value;
         else
-            _endValueWidth += value;
+            _endWidth += value;
 
         Deformated?.Invoke(value);
     }
 
     public void Reload()
     {
-        _endValueHeight = _startHeight;
-        _endValueWidth = _startWidth;
+        _endHeight = _startHeight;
+        _endWidth = _startWidth;
     }
 
     public void UpgradeHeight(float valueUpgrade)
@@ -81,14 +81,14 @@ public class PlayerDeformation : MonoBehaviour
 
     private void ChangeWidth()
     {
-        _width = Mathf.MoveTowards(_width, _endValueWidth, _deformationSpeed * Time.deltaTime);
-        _deformationMaterial.material.SetFloat("_PushValue", _width * _widthMultiplier);
+        _currentWidth = Mathf.MoveTowards(_currentWidth, _endWidth, _deformationSpeed * Time.deltaTime);
+        _deformationMaterial.material.SetFloat("_PushValue", _currentWidth * _widthMultiplier);
     }
 
     private void ChangeHeight()
     {
-        _height = Mathf.MoveTowards(_height, _endValueHeight, _deformationSpeed * Time.deltaTime);
-        _collider.transform.localScale = new Vector3(1, _yScaleCollider + _height * _heightMultiplier * _heightColliderMultiplier, 1);
-        _topSpine.position = _botSpine.position + new Vector3(0, _height * _heightMultiplier + _additionalHeightOffset, 0);
+        _currentHeight = Mathf.MoveTowards(_currentHeight, _endHeight, _deformationSpeed * Time.deltaTime);
+        _collider.transform.localScale = new Vector3(1, _yScaleCollider + _currentHeight * _heightMultiplier * _heightColliderMultiplier, 1);
+        _topSpine.position = _botSpine.position + new Vector3(0, _currentHeight * _heightMultiplier + _additionalHeightOffset, 0);
     }
 }

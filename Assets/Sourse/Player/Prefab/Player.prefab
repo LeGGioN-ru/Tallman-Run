@@ -704,6 +704,7 @@ GameObject:
   - component: {fileID: 3654507033652842129}
   - component: {fileID: 3654507033652842128}
   - component: {fileID: 1539991000}
+  - component: {fileID: 666266082}
   m_Layer: 0
   m_Name: Collider
   m_TagString: Untagged
@@ -772,7 +773,7 @@ MonoBehaviour:
   _topSpine: {fileID: 8462582367278955769}
   _botSpine: {fileID: 7616268363829448652}
   _collider: {fileID: 3654507033652842135}
-  _deformationSpeed: 5
+  _deformationSpeed: 200
 --- !u!114 &3654507033652842128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -802,6 +803,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerBehaviour: {fileID: 1913948978}
   _animator: {fileID: 2180468687107565616}
+--- !u!114 &666266082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3654507033652842132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5483e659ec99640408a0b5b7378c4eae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moneyCount: 3
 --- !u!1 &4459316298515566190
 GameObject:
   m_ObjectHideFlags: 0
