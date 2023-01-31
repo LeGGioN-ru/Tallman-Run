@@ -359,7 +359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5483e659ec99640408a0b5b7378c4eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _allMoney: 0
+  _allMoney: 100
   _moneyCollectedOnLevel: 0
 --- !u!1 &136038412
 GameObject:
