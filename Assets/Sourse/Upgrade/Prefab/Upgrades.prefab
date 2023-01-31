@@ -891,5 +891,6 @@ MonoBehaviour:
   _price: 1
   _playerMoney: {fileID: 0}
   _particlesPoint: {fileID: 0}
-  _particles: {fileID: 0}
+  _particles: {fileID: 9157105887693468085, guid: 997636bd1220af447baa8625d2153c4d, type: 3}
+  _playerMover: {fileID: 0}
   _speedUpgrade: 20
