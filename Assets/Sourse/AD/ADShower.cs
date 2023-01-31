@@ -6,17 +6,17 @@ using Agava.YandexGames;
 
 public class ADShower : MonoBehaviour
 {
-    public event Action _onVideoOpened;
-    public event Action _onRewardedCallback;
+    public event Action OnVideoOpened;
+    public event Action OnRewardedCallback;
 
     private void OnEnable()
     {
-        _onVideoOpened += () =>
+        OnVideoOpened += () =>
         {
             ChangeSoundVolume(0);
         };
 
-        _onRewardedCallback += () =>
+        OnRewardedCallback += () =>
         {
             ChangeSoundVolume(1);
         };
@@ -24,12 +24,12 @@ public class ADShower : MonoBehaviour
 
     private void OnDisable()
     {
-        _onVideoOpened -= () =>
+        OnVideoOpened -= () =>
         {
             ChangeSoundVolume(0);
         };
 
-        _onRewardedCallback -= () =>
+        OnRewardedCallback -= () =>
         {
             ChangeSoundVolume(1);
         };
@@ -54,7 +54,7 @@ public class ADShower : MonoBehaviour
 
     public void ShowRewardedAD()
     {
-        VideoAd.Show(_onVideoOpened, _onRewardedCallback);
+        VideoAd.Show(OnVideoOpened, OnRewardedCallback);
     }
 
     public void ShowAD()

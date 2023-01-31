@@ -19,7 +19,7 @@ public class PlayerMoney : MonoBehaviour
 
     private void Start()
     {
-        MoneyCountChanged.Invoke(_allMoney);
+        MoneyCountChanged?.Invoke(_allMoney);
     }
 
     public void CollectCoin()
@@ -33,6 +33,12 @@ public class PlayerMoney : MonoBehaviour
     public void DecreaseMoney(int money)
     {
         _allMoney -= money;
+        MoneyCountChanged.Invoke(_allMoney);
+    }
+
+    public void IncreaseMoney(int bonus)
+    {
+        _allMoney += _moneyCollectedOnLevel * bonus;
         MoneyCountChanged.Invoke(_allMoney);
     }
 }
