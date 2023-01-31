@@ -16,6 +16,8 @@ public class PlayerDeformation : MonoBehaviour
 
     public event Action<int> Deformated;
 
+    private float _startWidth;
+    private float _startHeight;
     private float _width;
     private float _height;
     private float _endValueWidth;
@@ -53,6 +55,28 @@ public class PlayerDeformation : MonoBehaviour
             _endValueWidth += value;
 
         Deformated?.Invoke(value);
+    }
+
+    public void Reload()
+    {
+        _endValueHeight = _startHeight;
+        _endValueWidth = _startWidth;
+    }
+
+    public void UpgradeHeight(float valueUpgrade)
+    {
+        UpgradeCharacteristic(ref _startHeight,valueUpgrade);
+    }
+
+    public void UpgradeWidth(float valueUpgrade)
+    {
+        UpgradeCharacteristic(ref _startWidth,valueUpgrade);
+    }
+
+    private void UpgradeCharacteristic(ref float value, float valueUpgrade)
+    {
+        value += valueUpgrade;
+        Reload();
     }
 
     private void ChangeWidth()
