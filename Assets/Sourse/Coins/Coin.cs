@@ -1,9 +1,18 @@
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class Coin : MonoBehaviour
 {
+    private AudioSource _audioSource;
+
+    private void Start()
+    {
+        _audioSource = GetComponent<AudioSource>();
+    }
+
     public void Collect()
     {
-        gameObject.SetActive(false);
+        _audioSource.Play();
+        //gameObject.SetActive(false);
     }
 }

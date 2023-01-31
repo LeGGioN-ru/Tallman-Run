@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Bezier))]
+[RequireComponent(typeof(AudioSource))]
 public class JumpPanel : MonoBehaviour
 {
     [SerializeField] private Transform _point1;
@@ -12,10 +13,12 @@ public class JumpPanel : MonoBehaviour
     [SerializeField] private float _jumpSpeed = 0.01f;
 
     private float _time;
+    private AudioSource _audioSource;
 
     private void Start()
     {
         _bezier = GetComponent<Bezier>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     private IEnumerator JumpCoroutine(Transform player)
@@ -31,6 +34,7 @@ public class JumpPanel : MonoBehaviour
 
     public void Jump(Transform player)
     {
+        _audioSource.Play();
         StartCoroutine(JumpCoroutine(player));
     }
 
