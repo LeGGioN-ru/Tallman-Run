@@ -6,6 +6,8 @@ public abstract class Upgrader : MonoBehaviour
 {
     [SerializeField] private float _price;
     [SerializeField] private PlayerMoney _playerMoney;
+    [SerializeField] private Transform _particlesPoint;
+    [SerializeField] private ParticleSystem _particles;
 
     private Button _button;
 
@@ -17,13 +19,13 @@ public abstract class Upgrader : MonoBehaviour
 
     private void OnEnable()
     {
-        _button.onClick.AddListener(Upgrade);
+        _button.onClick.AddListener(OnClick);
         _playerMoney.MoneyCountChanged += OnMoneyCountChanged;
     }
 
     private void OnDisable()
     {
-        _button.onClick.RemoveListener(Upgrade);
+        _button.onClick.RemoveListener(OnClick);
         _playerMoney.MoneyCountChanged -= OnMoneyCountChanged;
     }
 
@@ -33,6 +35,12 @@ public abstract class Upgrader : MonoBehaviour
             _button.enabled = false;
         else
             _button.enabled = true;
+    }
+
+    private void OnClick()
+    {
+        Instantiate(_particles, _particlesPoint.transform).Play();
+        Upgrade();
     }
 
     protected abstract void Upgrade();

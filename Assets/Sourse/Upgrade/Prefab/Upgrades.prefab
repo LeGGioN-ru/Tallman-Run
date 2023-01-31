@@ -137,6 +137,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _price: 1
   _playerMoney: {fileID: 0}
+  _particlesPoint: {fileID: 0}
+  _particles: {fileID: 9157105887693468085, guid: 489b01d7d46798647aa3ac2848ace53b, type: 3}
   _playerDeformation: {fileID: 0}
   _heightUpgrade: 20
 --- !u!1 &8480811426183574471
@@ -546,6 +548,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _price: 1
   _playerMoney: {fileID: 0}
+  _particlesPoint: {fileID: 0}
+  _particles: {fileID: 9157105887693468085, guid: 0d1522c40559a164cb96b16858174f09, type: 3}
   _playerDeformation: {fileID: 0}
   _widthUpgrade: 20
 --- !u!1 &8480811427780893584
@@ -886,4 +890,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _price: 1
   _playerMoney: {fileID: 0}
+  _particlesPoint: {fileID: 0}
+  _particles: {fileID: 0}
   _speedUpgrade: 20
