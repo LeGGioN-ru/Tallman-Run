@@ -14,7 +14,7 @@ public abstract class Upgrader : MonoBehaviour
     private void Awake()
     {
         _button = GetComponent<Button>();
-        OnMoneyCountChanged(_playerMoney.MoneyCount);
+        OnMoneyCountChanged(_playerMoney.AllMoney);
     }
 
     private void OnEnable()

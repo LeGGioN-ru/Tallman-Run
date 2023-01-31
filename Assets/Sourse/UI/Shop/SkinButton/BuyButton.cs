@@ -15,7 +15,7 @@ public class BuyButton : MonoBehaviour
         _button = GetComponent<Button>();
         _costText.text = _cost.ToString();
 
-        if (PlayerMoney.Instance.MoneyCount <= _cost)
+        if (PlayerMoney.Instance.AllMoney <= _cost)
             _button.enabled = false;
     }
 
