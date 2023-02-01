@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     {
         if (other.TryGetComponent(out Obstacle obstacle))
         {
+            Debug.Log("here");
             obstacle.DealDamage(_playerDeformation);
         }
     }

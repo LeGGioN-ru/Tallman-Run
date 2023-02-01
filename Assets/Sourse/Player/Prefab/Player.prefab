@@ -584,7 +584,6 @@ GameObject:
   - component: {fileID: 3654507032097643715}
   - component: {fileID: 3654507032097643772}
   - component: {fileID: 3654507032097643773}
-  - component: {fileID: 3654507032097643775}
   - component: {fileID: 3654507032097643768}
   - component: {fileID: 716995905847538674}
   - component: {fileID: 1913948978}
@@ -626,8 +625,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2da38c520c8381d4998e97f3a48be769, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 3
+  _speed: 4
   _rotationSpeed: 0.4
+  _rotationSpeedKeyBoard: 1
   _leftGroundBorder: -4
   _rightGroundBorder: 4
   _eulerYMin: -70
@@ -659,19 +659,6 @@ CapsuleCollider:
   m_Height: 2.4967167
   m_Direction: 1
   m_Center: {x: 0, y: 0.74835837, z: 0}
---- !u!114 &3654507032097643775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3654507032097643713}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bd4ca3e4b5dd7a4083e7c1e27b6a614, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerDeformation: {fileID: 3654507033652842129}
 --- !u!114 &3654507032097643768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -736,6 +723,7 @@ GameObject:
   - component: {fileID: 3654507033652842129}
   - component: {fileID: 3654507033652842128}
   - component: {fileID: 1539991000}
+  - component: {fileID: 2984056941644231524}
   m_Layer: 0
   m_Name: Collider
   m_TagString: Untagged
@@ -835,6 +823,19 @@ MonoBehaviour:
   _playerBehaviour: {fileID: 1913948978}
   _preFinishMove: {fileID: 8195326942946688711}
   _animator: {fileID: 2180468687107565616}
+--- !u!114 &2984056941644231524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3654507033652842132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bd4ca3e4b5dd7a4083e7c1e27b6a614, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerDeformation: {fileID: 3654507033652842129}
 --- !u!1 &4459316298515566190
 GameObject:
   m_ObjectHideFlags: 0
