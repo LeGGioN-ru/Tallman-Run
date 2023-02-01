@@ -1567,6 +1567,10 @@ PrefabInstance:
       propertyPath: _speed
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3654507032097643772, guid: 450a1ce05c29d8b43b7a529ff50e5a44, type: 3}
+      propertyPath: _rigidbody
+      value: 
+      objectReference: {fileID: 1545521745}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 450a1ce05c29d8b43b7a529ff50e5a44, type: 3}
 --- !u!1 &836559243
@@ -2794,6 +2798,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8486561016708698043, guid: 54dd48b2b87de5645a189d99b6fe67cb, type: 3}
   m_PrefabInstance: {fileID: 1475238726}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1545521745 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 3654507033652842134, guid: 450a1ce05c29d8b43b7a529ff50e5a44, type: 3}
+  m_PrefabInstance: {fileID: 815156211}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1546928414
 GameObject:

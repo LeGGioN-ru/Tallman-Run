@@ -23,9 +23,10 @@ public class PlayerMover : MonoBehaviour
             Move();
             Rotate();
         }
-
-        if(Input.GetKey(KeyCode.W))
+        else if (Input.GetKey(KeyCode.W))
+        {
             Move();
+        }
 
         if (Input.GetKey(KeyCode.D))
             RotateWithKeyboard(true);
