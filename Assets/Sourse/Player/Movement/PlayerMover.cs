@@ -4,6 +4,7 @@ public class PlayerMover : MonoBehaviour
 {
     [SerializeField] private float _speed;
     [SerializeField] private float _rotationSpeed;
+    [SerializeField] private float _rotationSpeedKeyBoard = 1f;
     [SerializeField] private float _leftGroundBorder;
     [SerializeField] private float _rightGroundBorder;
     [SerializeField] private float _eulerYMin;
@@ -22,6 +23,15 @@ public class PlayerMover : MonoBehaviour
             Move();
             Rotate();
         }
+
+        if(Input.GetKey(KeyCode.W))
+            Move();
+
+        if (Input.GetKey(KeyCode.D))
+            RotateWithKeyboard(true);
+
+        if (Input.GetKey(KeyCode.A))
+            RotateWithKeyboard(false);
     }
 
     private void Move()
@@ -38,6 +48,16 @@ public class PlayerMover : MonoBehaviour
 
         _eulerY += deltaX * _rotationSpeed;
         _eulerY = Mathf.Clamp(_eulerY, _eulerYMin, _eulerYMax);
+        transform.eulerAngles = new Vector3(0, _eulerY, 0);
+    }
+
+    private void RotateWithKeyboard(bool isRight)
+    {
+        if(isRight)
+            _eulerY = Mathf.MoveTowards(_eulerY, _eulerYMax, _rotationSpeedKeyBoard);
+        else
+            _eulerY = Mathf.MoveTowards(_eulerY, _eulerYMin, _rotationSpeedKeyBoard);
+
         transform.eulerAngles = new Vector3(0, _eulerY, 0);
     }
 

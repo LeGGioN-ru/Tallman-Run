@@ -11,14 +11,17 @@ public class MoveAnimationsController : MonoBehaviour
         if(isFinish == false)
         {
             if(Input.GetMouseButtonDown(0))
-            {
                 _animator.SetBool(PlayerAnimationsController.Params.Run, true);
-            }
 
             if(Input.GetMouseButtonUp(0))
-            {
                 _animator.SetBool(PlayerAnimationsController.Params.Run, false);
-            }
+
+            if(Input.GetKeyDown(KeyCode.W))
+                _animator.SetBool(PlayerAnimationsController.Params.Run, true);
+
+            if (Input.GetKeyUp(KeyCode.W))
+                _animator.SetBool(PlayerAnimationsController.Params.Run, false);
+
         }
         else
         {
