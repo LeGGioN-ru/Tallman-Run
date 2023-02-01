@@ -5,7 +5,7 @@ public class MoneyView : MonoBehaviour
 {
     [SerializeField] private TMP_Text _moneyText;
 
-    private void OnEnable()
+    private void Start()
     {
         PlayerMoney.Instance.MoneyCountChanged += (int money) =>
         {
