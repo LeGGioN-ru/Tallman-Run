@@ -1,3 +1,4 @@
+using Lean.Localization;
 using TMPro;
 using UnityEngine;
 
@@ -31,7 +32,7 @@ public class UpgraderView : MonoBehaviour
     private void OnClicked()
     {
         _priceText.text = _upgrader.Price.ToString();
-        _levelText.text = "Уровень:" + _upgrader.Level.ToString();
+        _levelText.text = LeanLocalization.GetTranslationText("Level") + ":" + _upgrader.Level.ToString();
 
         if (_isFirstCheck)
         {
