@@ -53,6 +53,8 @@ public class PlayerDeformation : MonoBehaviour
     {
         if (_endHeight + value > 0)
             _endHeight += value;
+        else if (_endHeight + value < 0 && _endHeight != 0)
+            _endHeight = 0;
         else
             _endWidth += value;
 
