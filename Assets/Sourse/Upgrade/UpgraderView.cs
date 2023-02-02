@@ -16,6 +16,10 @@ public class UpgraderView : MonoBehaviour
     private void Awake()
     {
         _upgrader = GetComponent<Upgrader>();
+    }
+
+    private void Start()
+    {
         OnClicked();
     }
 

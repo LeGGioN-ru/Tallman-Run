@@ -273,17 +273,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   translationName: GAME ON PAUSE!
   FallbackText: 
---- !u!114 &3302779 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3302779, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-  m_PrefabInstance: {fileID: 989023047}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7177b16c0f78c3e4eb7bb2be174e65b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &3895300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -808,17 +797,6 @@ MonoBehaviour:
   - Language: en
     Text: Tap to start
     Object: {fileID: 0}
---- !u!114 &378353635 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8480811427969504848, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-  m_PrefabInstance: {fileID: 989023047}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f13dddef0da8c5b4f9783e62c10c7bcf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &492091706
 GameObject:
   m_ObjectHideFlags: 0
@@ -1446,8 +1424,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041D\u0430\u0436\u043C\u0438\u0442\u0435 \u0447\u0442\u043E\u0431\u044B
-    \u0438\u0433\u0440\u0430\u0442\u044C"
+  m_text: Tap to start
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6d66de62ef0498540855d39307ad27d9, type: 2}
   m_sharedMaterial: {fileID: -3982085264750867299, guid: 6d66de62ef0498540855d39307ad27d9, type: 2}
@@ -1474,7 +1451,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 71.1
+  m_fontSize: 105.95
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2344,6 +2321,10 @@ PrefabInstance:
       propertyPath: _particlesPoint
       value: 
       objectReference: {fileID: 1186705068}
+    - target: {fileID: 2029120009, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 30157477}
     - target: {fileID: 8480811427946707504, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
       propertyPath: m_Name
       value: Upgrades
@@ -2492,7 +2473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806f0696300aeac44a0e17efee222854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentLanguage: ru
+  currentLanguage: en
   detectLanguage: 1
   defaultLanguage: 
   saveLoad: 0
@@ -4018,17 +3999,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1788510545}
   m_CullTransparentMesh: 1
---- !u!114 &1791852241 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1791852241, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-  m_PrefabInstance: {fileID: 989023047}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f13dddef0da8c5b4f9783e62c10c7bcf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1812332269
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4526,28 +4496,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efb7c844289c63044abc9fcb83475096, type: 3}
---- !u!1 &2029120007 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8480811427946707504, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-  m_PrefabInstance: {fileID: 989023047}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2029120009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2029120007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88b2f4a497ef9444d81522960b24446a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _upgraders:
-  - {fileID: 378353635}
-  - {fileID: 3302779}
-  - {fileID: 1791852241}
-  _playerMoney: {fileID: 30157477}
 --- !u!1 &2041244512
 GameObject:
   m_ObjectHideFlags: 0
