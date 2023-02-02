@@ -48,9 +48,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b9a71fc39a72c84385885a50a8ba533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movePoints: []
-  _moveSpeed: 0
-  _rotation: {x: 0, y: 0, z: 0}
+  _movePoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  _moveSpeed: 2
+  _rotation: {x: 0, y: 50, z: 0}
 --- !u!114 &8486561016708698042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,7 +65,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: badc8291f6306284caba98a1cc8e7bde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _valueDeformationChange: 0
+  _valueDeformationChange: 20
   _directionDeformationChange: 0
 --- !u!65 &710835521316330255
 BoxCollider:
