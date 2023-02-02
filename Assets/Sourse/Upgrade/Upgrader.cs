@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,10 +7,15 @@ public abstract class Upgrader : MonoBehaviour
 {
     [SerializeField] private float _price;
     [SerializeField] private PlayerMoney _playerMoney;
-    [SerializeField] private Transform _particlesPoint;
-    [SerializeField] private ParticleSystem _particles;
+    [SerializeField] private float _priceIncrease;
 
+    private int _level;
     private Button _button;
+
+    public int Level => _level;
+    public float Price => _price;
+
+    public Action Clicked;
 
     private void Awake()
     {
@@ -39,8 +45,10 @@ public abstract class Upgrader : MonoBehaviour
 
     private void OnClick()
     {
-        Instantiate(_particles, _particlesPoint.transform).Play();
         Upgrade();
+        _price += _priceIncrease;
+        _level++;
+        Clicked?.Invoke();
     }
 
     protected abstract void Upgrade();
