@@ -57,7 +57,7 @@ public class PlayerDeformation : MonoBehaviour
     {
         PlaySound(value);
 
-        if (_endHeight + value > 0)
+        if (_endHeight + value >= 0)
             _endHeight += value;
         else if (_endHeight + value < 0 && _endHeight != 0)
             _endHeight = 0;
