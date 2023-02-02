@@ -1549,14 +1549,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1444035838, guid: 450a1ce05c29d8b43b7a529ff50e5a44, type: 3}
-      propertyPath: _downParticle
-      value: 
-      objectReference: {fileID: 815156212}
-    - target: {fileID: 1444035838, guid: 450a1ce05c29d8b43b7a529ff50e5a44, type: 3}
-      propertyPath: _growParticle
-      value: 
-      objectReference: {fileID: 815156213}
+    - target: {fileID: 1906321305, guid: 450a1ce05c29d8b43b7a529ff50e5a44, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923079368, guid: 450a1ce05c29d8b43b7a529ff50e5a44, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3654507032097643713, guid: 450a1ce05c29d8b43b7a529ff50e5a44, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1607,16 +1607,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 450a1ce05c29d8b43b7a529ff50e5a44, type: 3}
---- !u!198 &815156212 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 1923079368, guid: 450a1ce05c29d8b43b7a529ff50e5a44, type: 3}
-  m_PrefabInstance: {fileID: 815156211}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &815156213 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 1906321305, guid: 450a1ce05c29d8b43b7a529ff50e5a44, type: 3}
-  m_PrefabInstance: {fileID: 815156211}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &836559243
 GameObject:
   m_ObjectHideFlags: 0
