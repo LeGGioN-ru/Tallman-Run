@@ -7,6 +7,5 @@ public class Obstacle : MonoBehaviour
     public virtual void DealDamage(PlayerDeformation playerDeformation)
     {
         playerDeformation.Execute(_damage);
-        Debug.Log("Damage!");
     }
 }
