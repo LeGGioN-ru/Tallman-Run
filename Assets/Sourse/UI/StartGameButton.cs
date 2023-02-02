@@ -9,6 +9,7 @@ public class StartGameButton : MonoBehaviour
 
     public void OnStartGame()
     {
+        GameAnalyticsEvents.Instace.OnLevelStartGA();
         _shopButton.gameObject.SetActive(false);
         _upgrades.SetActive(false);
         _playerBehaviour.Play();

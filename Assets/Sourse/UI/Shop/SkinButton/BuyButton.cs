@@ -23,6 +23,7 @@ public class BuyButton : MonoBehaviour
     {
         PlayerMoney.Instance.DecreaseMoney(_cost);
         _costText.enabled = false;
+
         this.enabled = false;
     }
 }

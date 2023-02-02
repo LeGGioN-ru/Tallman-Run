@@ -10,6 +10,7 @@ public class FinishTrigger : MonoBehaviour
     {
         if (other.TryGetComponent(out PlayerBehaviour playerBehaviour))
         {
+            GameAnalyticsEvents.Instace.OnLevelFinishGA();
             playerBehaviour.StartFinish();
 
             _confetti.Play();
