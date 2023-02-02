@@ -5,9 +5,9 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Button))]
 public abstract class Upgrader : MonoBehaviour
 {
-    [SerializeField] private float _price;
+    [SerializeField] private int _price;
     [SerializeField] private PlayerMoney _playerMoney;
-    [SerializeField] private float _priceIncrease;
+    [SerializeField] private int _priceIncrease;
 
     private int _level;
     private Button _button;
@@ -20,32 +20,32 @@ public abstract class Upgrader : MonoBehaviour
     private void Awake()
     {
         _button = GetComponent<Button>();
-        OnMoneyCountChanged(_playerMoney.AllMoney);
     }
 
     private void OnEnable()
     {
         _button.onClick.AddListener(OnClick);
-        _playerMoney.MoneyCountChanged += OnMoneyCountChanged;
     }
 
     private void OnDisable()
     {
         _button.onClick.RemoveListener(OnClick);
-        _playerMoney.MoneyCountChanged -= OnMoneyCountChanged;
     }
 
-    private void OnMoneyCountChanged(int currentMoney)
+    public void EnableButton()
     {
-        if (currentMoney < _price)
-            _button.interactable = false;
-        else
-            _button.interactable = true;
+        _button.interactable = true;
+    }
+
+    public void DisableButton()
+    {
+        _button.interactable = false;
     }
 
     private void OnClick()
     {
         Upgrade();
+        _playerMoney.DecreaseMoney(_price);
         _price += _priceIncrease;
         _level++;
         Clicked?.Invoke();

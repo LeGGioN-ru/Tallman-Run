@@ -1,13 +1,22 @@
 using TMPro;
 using UnityEngine;
 
+[RequireComponent(typeof(Upgrader))]
 public class UpgraderView : MonoBehaviour
 {
-    [SerializeField] private Upgrader _upgrader;
     [SerializeField] private Transform _particlesPoint;
     [SerializeField] private ParticleSystem _particles;
     [SerializeField] private TMP_Text _priceText;
     [SerializeField] private TMP_Text _levelText;
+
+    private Upgrader _upgrader;
+    private bool _isFirstCheck = true;
+
+    private void Awake()
+    {
+        _upgrader = GetComponent<Upgrader>();
+        OnClicked();
+    }
 
     private void OnEnable()
     {
@@ -22,7 +31,14 @@ public class UpgraderView : MonoBehaviour
     private void OnClicked()
     {
         _priceText.text = _upgrader.Price.ToString();
-        _levelText.text = _upgrader.Level.ToString();
+        _levelText.text = "Уровень:" + _upgrader.Level.ToString();
+
+        if (_isFirstCheck)
+        {
+            _isFirstCheck = false;
+            return;
+        }
+
         Instantiate(_particles, _particlesPoint.position, Quaternion.identity).Play();
     }
 }
