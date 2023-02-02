@@ -4,6 +4,7 @@ public class FinishTrigger : MonoBehaviour
 {
     [SerializeField] private ADShower _ad;
     [SerializeField] private GameObject _videoButton;
+    [SerializeField] private ParticleSystem _confetti;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -11,6 +12,7 @@ public class FinishTrigger : MonoBehaviour
         {
             playerBehaviour.StartFinish();
 
+            _confetti.Play();
             _videoButton.SetActive(true);
             _ad.ShowAD();
         }
