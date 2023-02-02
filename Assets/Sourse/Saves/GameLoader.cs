@@ -1,18 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
+using Newtonsoft.Json;
 using UnityEngine;
 
 public class GameLoader : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private PlayerDeformation _playerDeformation;
+    [SerializeField] private UnlockedSkins _unlockedSkins;
+    [SerializeField] private SkinChanger _skinChanger;
+    [SerializeField] private PlayerMoney _playerMoney;
+
+    private void Execute()
     {
-        
+        string jsonString = PlayerPrefs.GetString(GameSaver.Save);
+        Save save = JsonConvert.DeserializeObject<Save>(jsonString);
+        SetData(save);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void SetData(Save save)
     {
-        
+        _playerDeformation.SetStartCharacteristics(save.StartHeight, save.StartWidth);
     }
 }

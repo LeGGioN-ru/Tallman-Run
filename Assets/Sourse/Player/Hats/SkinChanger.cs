@@ -11,7 +11,7 @@ public class SkinChanger : MonoBehaviour
 
     public void SetNewHat(int newHatIndex)
     {
-        if(_currentHat != null)
+        if (_currentHat != null)
             _currentHat.gameObject.SetActive(false);
 
         _hats[newHatIndex].gameObject.SetActive(true);

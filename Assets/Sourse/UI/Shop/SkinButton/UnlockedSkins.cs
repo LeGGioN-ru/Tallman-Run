@@ -8,6 +8,8 @@ public class UnlockedSkins : MonoBehaviour
 
     private List<int> _unlockedButtons = new List<int>();
 
+    public IReadOnlyList<int> UnlockedButtons => _unlockedButtons;
+
     public void UnlockHat(int hatIndex, int buttonIndex)
     {
         _skinChanger.SetNewHat(hatIndex);

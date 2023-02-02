@@ -13,6 +13,8 @@ public class PlayerDeformation : MonoBehaviour
     public Renderer DeformationMaterial => _deformationMaterial;
     public float EndWidth => _endWidth;
     public float EndHeight => _endHeight;
+    public float StartWidth => _startWidth;
+    public float StartHeight => _startHeight;
 
     public event Action<int> Deformated;
 
@@ -65,12 +67,19 @@ public class PlayerDeformation : MonoBehaviour
 
     public void UpgradeHeight(float valueUpgrade)
     {
-        UpgradeCharacteristic(ref _startHeight,valueUpgrade);
+        UpgradeCharacteristic(ref _startHeight, valueUpgrade);
     }
 
     public void UpgradeWidth(float valueUpgrade)
     {
-        UpgradeCharacteristic(ref _startWidth,valueUpgrade);
+        UpgradeCharacteristic(ref _startWidth, valueUpgrade);
+    }
+
+    public void SetStartCharacteristics(float startHeight, float startWidth)
+    {
+        _startHeight = startHeight;
+        _startWidth = startWidth;
+        Reload();
     }
 
     private void UpgradeCharacteristic(ref float value, float valueUpgrade)
