@@ -32,9 +32,9 @@ public abstract class Upgrader : MonoBehaviour
     private void OnMoneyCountChanged(int currentMoney)
     {
         if (currentMoney < _price)
-            _button.enabled = false;
+            _button.interactable = false;
         else
-            _button.enabled = true;
+            _button.interactable = true;
     }
 
     private void OnClick()

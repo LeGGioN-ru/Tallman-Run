@@ -359,7 +359,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5483e659ec99640408a0b5b7378c4eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moneyCount: 1000
+  _allMoney: 0
+  _moneyCollectedOnLevel: 0
 --- !u!1 &136038412
 GameObject:
   m_ObjectHideFlags: 0
@@ -1768,22 +1769,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2094998753}
     m_Modifications:
-    - target: {fileID: 8480811426017456267, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8480811426017456267, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8480811426017456267, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8480811426017456267, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8480811426017456271, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
       propertyPath: _playerMoney
       value: 
@@ -1796,22 +1781,6 @@ PrefabInstance:
       propertyPath: _playerDeformation
       value: 
       objectReference: {fileID: 815156213}
-    - target: {fileID: 8480811427006376176, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8480811427006376176, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8480811427006376176, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8480811427006376176, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8480811427006376180, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
       propertyPath: _playerMoney
       value: 
@@ -1898,7 +1867,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8480811427946707507, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -2.499939
+      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 8480811427946707507, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1912,26 +1881,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8480811427969504844, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8480811427969504844, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8480811427969504844, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8480811427969504844, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8480811427969504848, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: _particles
-      value: 
-      objectReference: {fileID: 9157105887693468085, guid: 997636bd1220af447baa8625d2153c4d, type: 3}
     - target: {fileID: 8480811427969504848, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
       propertyPath: _playerMoney
       value: 
@@ -3180,6 +3129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0467d24f7809b74eb3fcfee1911d918, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _ad: {fileID: 0}
+  _videoButton: {fileID: 0}
 --- !u!54 &1938221926
 Rigidbody:
   m_ObjectHideFlags: 0
