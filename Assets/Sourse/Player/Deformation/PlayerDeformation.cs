@@ -9,6 +9,8 @@ public class PlayerDeformation : MonoBehaviour
     [SerializeField] private Transform _botSpine;
     [SerializeField] private CapsuleCollider _collider;
     [SerializeField] private float _deformationSpeed;
+    [SerializeField] private AudioSource _growSound;
+    [SerializeField] private AudioSource _downSound;
 
     public Renderer DeformationMaterial => _deformationMaterial;
     public float EndWidth => _endWidth;
@@ -41,6 +43,8 @@ public class PlayerDeformation : MonoBehaviour
 
     public void Execute(DirectionDeformation directionDeformation, int value)
     {
+        PlaySound(value);
+
         if (directionDeformation == DirectionDeformation.Width)
             _endWidth += value;
         else if (directionDeformation == DirectionDeformation.Height)
@@ -51,6 +55,8 @@ public class PlayerDeformation : MonoBehaviour
 
     public void Execute(int value)
     {
+        PlaySound(value);
+
         if (_endHeight + value > 0)
             _endHeight += value;
         else if (_endHeight + value < 0 && _endHeight != 0)
@@ -82,6 +88,14 @@ public class PlayerDeformation : MonoBehaviour
         _startHeight = startHeight;
         _startWidth = startWidth;
         Reload();
+    }
+
+    private void PlaySound(int value)
+    {
+        if (value > 0)
+            _growSound.Play();
+        else
+            _downSound.Play();
     }
 
     private void UpgradeCharacteristic(ref float value, float valueUpgrade)
