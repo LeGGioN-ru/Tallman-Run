@@ -957,6 +957,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gate (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8646893022048661347, guid: efb7c844289c63044abc9fcb83475096, type: 3}
+      propertyPath: m_text
+      value: +200
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efb7c844289c63044abc9fcb83475096, type: 3}
 --- !u!1 &688967282
@@ -2681,6 +2685,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8646893022048661347, guid: efb7c844289c63044abc9fcb83475096, type: 3}
+      propertyPath: m_text
+      value: +50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efb7c844289c63044abc9fcb83475096, type: 3}
 --- !u!1 &1296330415
@@ -3586,14 +3594,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5286810625164384837, guid: efb7c844289c63044abc9fcb83475096, type: 3}
-      propertyPath: _valueDeformationChange
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 5286810625164384837, guid: efb7c844289c63044abc9fcb83475096, type: 3}
-      propertyPath: _directionDeformationChange
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6190634797623625231, guid: efb7c844289c63044abc9fcb83475096, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -3641,10 +3641,6 @@ PrefabInstance:
     - target: {fileID: 8165041713559252188, guid: efb7c844289c63044abc9fcb83475096, type: 3}
       propertyPath: m_Name
       value: Gate
-      objectReference: {fileID: 0}
-    - target: {fileID: 8646893022009710319, guid: efb7c844289c63044abc9fcb83475096, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efb7c844289c63044abc9fcb83475096, type: 3}
