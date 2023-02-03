@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class BonusView : MonoBehaviour
 {
+    [SerializeField] private GameObject _bonus;
     [SerializeField] private BonusChooser _bonusChooser;
     [SerializeField] private ADShower _aDShower;
 
@@ -32,5 +33,7 @@ public class BonusView : MonoBehaviour
     {
         _aDShower.ShowRewardedAD();
         _bonusMoney = _bonusChooser.ChooseBonus();
+
+        _bonus.SetActive(false);
     }
 }
