@@ -4,7 +4,6 @@ using UnityEngine;
 public class GameLoader : MonoBehaviour
 {
     [SerializeField] private PlayerDeformation _playerDeformation;
-    [SerializeField] private UnlockedSkins _unlockedSkins;
     [SerializeField] private SkinChanger _skinChanger;
     [SerializeField] private PlayerMoney _playerMoney;
 
