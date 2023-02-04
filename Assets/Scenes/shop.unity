@@ -1954,78 +1954,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8e0a3d4bb07a47469bda6e7f43e95a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1101482928
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1101482929}
-  - component: {fileID: 1101482931}
-  - component: {fileID: 1101482930}
-  m_Layer: 0
-  m_Name: Core
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1101482929
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1101482928}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 646.8051, y: 46.353477, z: -0.85034716}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1101482930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1101482928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d245e8dbde4f9574b8425a572f9307ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerDeformation: {fileID: 0}
-  _speedUpgrade: {fileID: 0}
-  _widthUpgrade: {fileID: 0}
-  _heightUpgrade: {fileID: 0}
-  _skinChanger: {fileID: 1913948988}
-  _skinSettersLoader: {fileID: 2094998754}
-  _playerMoney: {fileID: 1285380642}
---- !u!114 &1101482931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1101482928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf2dacbed541b2341b2492d631aa53f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerDeformation: {fileID: 0}
-  _heightUpgrade: {fileID: 0}
-  _widthUpgrade: {fileID: 0}
-  _speedUpgrade: {fileID: 0}
-  _unlockedSkins: {fileID: 1590857297}
-  _skinChanger: {fileID: 1913948988}
-  _playerMoney: {fileID: 1285380642}
-  _isExecuteOnStart: 0
 --- !u!1001 &1164392920
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3620,7 +3548,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f87ed146915e864e915a88bc0ca5e35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelNumber: 0
 --- !u!1001 &2014250663
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3908,3 +3835,84 @@ MonoBehaviour:
   - {fileID: 299354204}
   - {fileID: 1404099554}
   - {fileID: 1184523413}
+--- !u!1001 &2830382019850237497
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2830382018753478024, guid: cf561a3947dd4834fb229bdb08461a3a, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2830382018753478024, guid: cf561a3947dd4834fb229bdb08461a3a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 646.8051
+      objectReference: {fileID: 0}
+    - target: {fileID: 2830382018753478024, guid: cf561a3947dd4834fb229bdb08461a3a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 46.353477
+      objectReference: {fileID: 0}
+    - target: {fileID: 2830382018753478024, guid: cf561a3947dd4834fb229bdb08461a3a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.85034716
+      objectReference: {fileID: 0}
+    - target: {fileID: 2830382018753478024, guid: cf561a3947dd4834fb229bdb08461a3a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2830382018753478024, guid: cf561a3947dd4834fb229bdb08461a3a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2830382018753478024, guid: cf561a3947dd4834fb229bdb08461a3a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2830382018753478024, guid: cf561a3947dd4834fb229bdb08461a3a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2830382018753478024, guid: cf561a3947dd4834fb229bdb08461a3a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2830382018753478024, guid: cf561a3947dd4834fb229bdb08461a3a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2830382018753478024, guid: cf561a3947dd4834fb229bdb08461a3a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2830382018753478025, guid: cf561a3947dd4834fb229bdb08461a3a, type: 3}
+      propertyPath: m_Name
+      value: CoreShop
+      objectReference: {fileID: 0}
+    - target: {fileID: 2830382018753478026, guid: cf561a3947dd4834fb229bdb08461a3a, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1285380642}
+    - target: {fileID: 2830382018753478026, guid: cf561a3947dd4834fb229bdb08461a3a, type: 3}
+      propertyPath: _skinChanger
+      value: 
+      objectReference: {fileID: 1913948988}
+    - target: {fileID: 2830382018753478026, guid: cf561a3947dd4834fb229bdb08461a3a, type: 3}
+      propertyPath: _skinSettersLoader
+      value: 
+      objectReference: {fileID: 2094998754}
+    - target: {fileID: 2830382018753478029, guid: cf561a3947dd4834fb229bdb08461a3a, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 1285380642}
+    - target: {fileID: 2830382018753478029, guid: cf561a3947dd4834fb229bdb08461a3a, type: 3}
+      propertyPath: _skinChanger
+      value: 
+      objectReference: {fileID: 1913948988}
+    - target: {fileID: 2830382018753478029, guid: cf561a3947dd4834fb229bdb08461a3a, type: 3}
+      propertyPath: _unlockedSkins
+      value: 
+      objectReference: {fileID: 1590857297}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cf561a3947dd4834fb229bdb08461a3a, type: 3}

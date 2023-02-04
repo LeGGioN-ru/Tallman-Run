@@ -8,6 +8,13 @@ public class LevelSaver : GameSaver
     [SerializeField] private WidthUpgrade _widthUpgrade;
     [SerializeField] private SpeedUpgrade _speedUpgrade;
     [SerializeField] private PlayerMoney _playerMoney;
+    [SerializeField] private bool _isStartSave;
+
+    private void Start()
+    {
+        if (_isStartSave)
+            Execute();
+    }
 
     protected override Save GetSave()
     {
