@@ -58,7 +58,7 @@ public class Save
 
     private bool TryGetPreviosSave(out Save save)
     {
-        string jsonSave = PlayerPrefs.GetString(GameSaver.Save);
+        string jsonSave = PlayerPrefs.GetString(SaveConstants.Save);
         save = null;
 
         if (jsonSave == null)

@@ -1954,17 +1954,78 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8e0a3d4bb07a47469bda6e7f43e95a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1138270177 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3654507033652842129, guid: 450a1ce05c29d8b43b7a529ff50e5a44, type: 3}
-  m_PrefabInstance: {fileID: 815156211}
+--- !u!1 &1101482928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1101482929}
+  - component: {fileID: 1101482931}
+  - component: {fileID: 1101482930}
+  m_Layer: 0
+  m_Name: Core
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1101482929
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101482928}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 646.8051, y: 46.353477, z: -0.85034716}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1101482930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101482928}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c23e5d3ddffadd94199cb73c3b78348b, type: 3}
+  m_Script: {fileID: 11500000, guid: d245e8dbde4f9574b8425a572f9307ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerDeformation: {fileID: 0}
+  _speedUpgrade: {fileID: 0}
+  _widthUpgrade: {fileID: 0}
+  _heightUpgrade: {fileID: 0}
+  _skinChanger: {fileID: 1913948988}
+  _skinSettersLoader: {fileID: 2094998754}
+  _playerMoney: {fileID: 1285380642}
+--- !u!114 &1101482931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101482928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2dacbed541b2341b2492d631aa53f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerDeformation: {fileID: 0}
+  _heightUpgrade: {fileID: 0}
+  _widthUpgrade: {fileID: 0}
+  _speedUpgrade: {fileID: 0}
+  _unlockedSkins: {fileID: 1590857297}
+  _skinChanger: {fileID: 1913948988}
+  _playerMoney: {fileID: 1285380642}
+  _isExecuteOnStart: 0
 --- !u!1001 &1164392920
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3734,8 +3795,6 @@ GameObject:
   - component: {fileID: 2094998751}
   - component: {fileID: 2094998750}
   - component: {fileID: 2094998754}
-  - component: {fileID: 2094998755}
-  - component: {fileID: 2094998756}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3849,35 +3908,3 @@ MonoBehaviour:
   - {fileID: 299354204}
   - {fileID: 1404099554}
   - {fileID: 1184523413}
---- !u!114 &2094998755
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2094998749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d245e8dbde4f9574b8425a572f9307ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerDeformation: {fileID: 1138270177}
-  _skinChanger: {fileID: 1913948988}
-  _playerMoney: {fileID: 1285380642}
-  _skinSettersLoader: {fileID: 2094998754}
---- !u!114 &2094998756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2094998749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf2dacbed541b2341b2492d631aa53f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerDeformation: {fileID: 1138270177}
-  _unlockedSkins: {fileID: 1590857297}
-  _skinChanger: {fileID: 1913948988}
-  _playerMoney: {fileID: 1285380642}

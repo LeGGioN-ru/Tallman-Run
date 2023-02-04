@@ -8,7 +8,10 @@ public class SkinSettersLoader : MonoBehaviour
 
     public void Execute(IReadOnlyList<int> openedButtons)
     {
-        foreach (var skin in _skinSetters)
+        if (openedButtons == null)
+            return;
+
+        foreach (SkinSetter skin in _skinSetters)
             if (openedButtons.Contains(skin.ButtonIndex))
                 skin.LoadSkinButton();
     }

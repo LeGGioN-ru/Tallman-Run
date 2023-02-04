@@ -8,7 +8,7 @@ public abstract class Upgrader : MonoBehaviour
     [SerializeField] private int _price;
     [SerializeField] private PlayerMoney _playerMoney;
     [SerializeField] private int _priceIncrease;
-    [SerializeField] private GameSaver _gameSaver;
+    [SerializeField] private SaveConstants _gameSaver;
 
     private int _level;
     private Button _button;
