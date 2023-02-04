@@ -11,6 +11,9 @@ public class SkinChanger : MonoBehaviour
     [SerializeField] private int _currentColorIndex;
     [SerializeField] private SkinnedMeshRenderer _mesh;
 
+    public int CurrentHatIndex => _currentHatIndex;
+    public int CurrentColorIndex => _currentColorIndex;
+
     public void LoadSkin(int colorIndex, int hatIndex)
     {
         _mesh.material = _colors[colorIndex];

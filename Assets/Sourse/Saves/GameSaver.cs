@@ -11,26 +11,28 @@ public class GameSaver : MonoBehaviour
 
     public static readonly string Save = nameof(Save);
 
-    private string _shopSceneName = "shop";
+    public static readonly string ShopSceneName = "shop";
 
-    private void Execute()
+    public void Execute()
     {
-        string newSceneName = string.Empty;
+        Save save;
 
-        if (SceneManager.GetActiveScene().name != _shopSceneName)
-        {
-            newSceneName = SceneManager.GetActiveScene().name;
-
-        }
+        if (SceneManager.GetActiveScene().name == ShopSceneName)
+            save = GetShopSave();
         else
-        {
-            string oldSave = PlayerPrefs.GetString(Save);
-            newSceneName = PlayerPrefs.GetString(JsonConvert.DeserializeObject<Save>(oldSave).CurrentScene);
-        }
+            save = GetGameSave();
 
-        Save save = new Save(0, 0, newSceneName, _playerMoney.AllMoney, _unlockedSkins.UnlockedButtons, _playerDeformation.StartHeight, _playerDeformation.StartWidth);
-        string jsonString = JsonConvert.SerializeObject(save);
-        PlayerPrefs.SetString(Save, jsonString);
+        PlayerPrefs.SetString(Save, JsonConvert.SerializeObject(save));
         PlayerPrefs.Save();
+    }
+
+    private Save GetGameSave()
+    {
+        return new Save(SceneManager.GetActiveScene().name, _playerMoney.AllMoney, _playerDeformation.StartHeight, _playerDeformation.StartWidth);
+    }
+
+    private Save GetShopSave()
+    {
+        return new Save(_skinChanger.CurrentHatIndex, _skinChanger.CurrentColorIndex, _playerMoney.AllMoney, _unlockedSkins.UnlockedButtons);
     }
 }
