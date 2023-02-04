@@ -8,6 +8,7 @@ public abstract class Upgrader : MonoBehaviour
     [SerializeField] private int _price;
     [SerializeField] private PlayerMoney _playerMoney;
     [SerializeField] private int _priceIncrease;
+    [SerializeField] private GameSaver _gameSaver;
 
     private int _level;
     private Button _button;
@@ -16,6 +17,7 @@ public abstract class Upgrader : MonoBehaviour
     public float Price => _price;
 
     public Action Clicked;
+    public Action SaveLoaded;
 
     private void Awake()
     {
@@ -30,6 +32,17 @@ public abstract class Upgrader : MonoBehaviour
     private void OnDisable()
     {
         _button.onClick.RemoveListener(OnClick);
+    }
+
+    public void LoadLevel(int level)
+    {
+        _level = level;
+        _price = _priceIncrease * level;
+
+        if (_price == 0)
+            _price = 1;
+
+        SaveLoaded?.Invoke();
     }
 
     public void EnableButton()
@@ -49,6 +62,7 @@ public abstract class Upgrader : MonoBehaviour
         _price += _priceIncrease;
         _level++;
         Clicked?.Invoke();
+        _gameSaver.Execute();
     }
 
     protected abstract void Upgrade();

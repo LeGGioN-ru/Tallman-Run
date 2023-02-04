@@ -716,26 +716,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2094998753}
     m_Modifications:
-    - target: {fileID: 3302773, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3302773, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3302773, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3302773, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3302778, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
       propertyPath: _particlesPoint
       value: 
       objectReference: {fileID: 815156212}
+    - target: {fileID: 3302779, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
+      propertyPath: _gameSaver
+      value: 
+      objectReference: {fileID: 1397797591}
     - target: {fileID: 3302779, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
       propertyPath: _playerMoney
       value: 
@@ -748,34 +736,6 @@ PrefabInstance:
       propertyPath: _particlesPoint
       value: 
       objectReference: {fileID: 815156212}
-    - target: {fileID: 1791852240, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1791852240, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1791852240, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1791852240, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1791852241, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: _playerMoney
-      value: 
-      objectReference: {fileID: 30157477}
-    - target: {fileID: 1791852241, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: _playerMover
-      value: 
-      objectReference: {fileID: 2032633094}
-    - target: {fileID: 1791852241, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: _speedUpgrade
-      value: 0.1
-      objectReference: {fileID: 0}
     - target: {fileID: 1791852245, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
       propertyPath: _particlesPoint
       value: 
@@ -784,6 +744,18 @@ PrefabInstance:
       propertyPath: _playerMoney
       value: 
       objectReference: {fileID: 30157477}
+    - target: {fileID: 4378080429286081267, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
+      propertyPath: _gameSaver
+      value: 
+      objectReference: {fileID: 1397797591}
+    - target: {fileID: 4378080429286081267, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
+      propertyPath: _playerMoney
+      value: 
+      objectReference: {fileID: 30157477}
+    - target: {fileID: 4378080429286081267, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
+      propertyPath: _playerDeformation
+      value: 
+      objectReference: {fileID: 815156213}
     - target: {fileID: 8480811427946707504, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
       propertyPath: m_Name
       value: Upgrades
@@ -872,22 +844,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8480811427969504844, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8480811427969504844, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8480811427969504844, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8480811427969504844, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 8480811427969504848, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
+      propertyPath: _gameSaver
+      value: 
+      objectReference: {fileID: 1397797591}
     - target: {fileID: 8480811427969504848, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
       propertyPath: _playerMoney
       value: 
@@ -896,10 +856,6 @@ PrefabInstance:
       propertyPath: _playerMover
       value: 
       objectReference: {fileID: 2032633094}
-    - target: {fileID: 8480811427969504848, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: _speedUpgrade
-      value: 0.1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
 --- !u!224 &301694917 stripped
@@ -907,6 +863,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8480811427946707507, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
   m_PrefabInstance: {fileID: 301694916}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &301694918 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4378080429286081267, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
+  m_PrefabInstance: {fileID: 301694916}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f6a792654be3c04e9f11fb4cf0e56d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &333998943
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1422,6 +1389,17 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
+--- !u!114 &719892610 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3302779, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
+  m_PrefabInstance: {fileID: 301694916}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7177b16c0f78c3e4eb7bb2be174e65b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &728842467
 GameObject:
   m_ObjectHideFlags: 0
@@ -2743,6 +2721,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1143097275 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8480811427969504848, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
+  m_PrefabInstance: {fileID: 301694916}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f13dddef0da8c5b4f9783e62c10c7bcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1225691350
 GameObject:
   m_ObjectHideFlags: 0
@@ -3030,7 +3019,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1397797589}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf2dacbed541b2341b2492d631aa53f9, type: 3}
   m_Name: 
@@ -3039,6 +3028,10 @@ MonoBehaviour:
   _unlockedSkins: {fileID: 0}
   _skinChanger: {fileID: 815156214}
   _playerMoney: {fileID: 30157477}
+  _heightUpgrade: {fileID: 719892610}
+  _widthUpgrade: {fileID: 301694918}
+  _speedUpgrade: {fileID: 1143097275}
+  _isExecuteOnStart: 1
 --- !u!4 &1397797592
 Transform:
   m_ObjectHideFlags: 0
@@ -3066,9 +3059,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d245e8dbde4f9574b8425a572f9307ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerDeformation: {fileID: 0}
-  _skinChanger: {fileID: 0}
-  _playerMoney: {fileID: 0}
+  _playerDeformation: {fileID: 815156213}
+  _skinChanger: {fileID: 815156214}
+  _playerMoney: {fileID: 30157477}
+  _skinSettersLoader: {fileID: 0}
+  _speedUpgrade: {fileID: 1143097275}
+  _widthUpgrade: {fileID: 301694918}
+  _heightUpgrade: {fileID: 719892610}
 --- !u!1 &1426892480
 GameObject:
   m_ObjectHideFlags: 0

@@ -141,6 +141,7 @@ MonoBehaviour:
   _price: 1
   _playerMoney: {fileID: 0}
   _priceIncrease: 20
+  _gameSaver: {fileID: 0}
   _playerDeformation: {fileID: 0}
   _heightUpgrade: 5
 --- !u!114 &3302778
@@ -1129,8 +1130,8 @@ GameObject:
   - component: {fileID: 1791852244}
   - component: {fileID: 1791852243}
   - component: {fileID: 1791852242}
-  - component: {fileID: 1791852241}
   - component: {fileID: 1791852245}
+  - component: {fileID: 4378080429286081267}
   m_Layer: 5
   m_Name: Button (2)
   m_TagString: Untagged
@@ -1243,23 +1244,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1791852241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1791852239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f13dddef0da8c5b4f9783e62c10c7bcf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _price: 1
-  _playerMoney: {fileID: 0}
-  _priceIncrease: 20
-  _playerMover: {fileID: 0}
-  _speedUpgrade: 5
 --- !u!114 &1791852245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1276,6 +1260,24 @@ MonoBehaviour:
   _particles: {fileID: 9157105887693468085, guid: 0d1522c40559a164cb96b16858174f09, type: 3}
   _priceText: {fileID: 1648175490}
   _levelText: {fileID: 778227229}
+--- !u!114 &4378080429286081267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791852239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f6a792654be3c04e9f11fb4cf0e56d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _price: 1
+  _playerMoney: {fileID: 0}
+  _priceIncrease: 20
+  _gameSaver: {fileID: 0}
+  _playerDeformation: {fileID: 0}
+  _widthUpgrade: 15
 --- !u!1 &1805367600
 GameObject:
   m_ObjectHideFlags: 0
@@ -1780,7 +1782,7 @@ MonoBehaviour:
   _upgraders:
   - {fileID: 8480811427969504848}
   - {fileID: 3302779}
-  - {fileID: 1791852241}
+  - {fileID: 4378080429286081267}
   _playerMoney: {fileID: 0}
 --- !u!1 &8480811427969504845
 GameObject:
@@ -1923,8 +1925,9 @@ MonoBehaviour:
   _price: 1
   _playerMoney: {fileID: 0}
   _priceIncrease: 20
+  _gameSaver: {fileID: 0}
   _playerMover: {fileID: 0}
-  _speedUpgrade: 20
+  _speedUpgrade: 0.1
 --- !u!114 &378353639
 MonoBehaviour:
   m_ObjectHideFlags: 0

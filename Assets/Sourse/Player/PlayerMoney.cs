@@ -30,6 +30,12 @@ public class PlayerMoney : MonoBehaviour
         MoneyCountChanged.Invoke(_allMoney);
     }
 
+    public void LoadMoney(int money)
+    {
+        _allMoney = money;
+        MoneyCountChanged?.Invoke(_allMoney);
+    }
+
     public void DecreaseMoney(int money)
     {
         _allMoney -= money;

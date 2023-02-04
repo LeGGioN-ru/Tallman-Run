@@ -4,12 +4,7 @@ using UnityEngine;
 
 public class SkinSettersLoader : MonoBehaviour
 {
-    private SkinSetter[] _skinSetters;
-
-    private void Awake()
-    {
-        _skinSetters = GetComponentsInChildren<SkinSetter>();
-    }
+    [SerializeField] private SkinSetter[] _skinSetters;
 
     public void Execute(IReadOnlyList<int> openedButtons)
     {

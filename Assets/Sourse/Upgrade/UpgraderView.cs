@@ -11,7 +11,6 @@ public class UpgraderView : MonoBehaviour
     [SerializeField] private TMP_Text _levelText;
 
     private Upgrader _upgrader;
-    private bool _isFirstCheck = true;
 
     private void Awake()
     {
@@ -20,30 +19,30 @@ public class UpgraderView : MonoBehaviour
 
     private void Start()
     {
-        OnClicked();
+        UpdateView();
     }
 
     private void OnEnable()
     {
         _upgrader.Clicked += OnClicked;
+        _upgrader.SaveLoaded += UpdateView;
     }
 
     private void OnDisable()
     {
         _upgrader.Clicked -= OnClicked;
+        _upgrader.SaveLoaded -= UpdateView;
+    }
+
+    private void UpdateView()
+    {
+        _priceText.text = _upgrader.Price.ToString();
+        _levelText.text = LeanLocalization.GetTranslationText("Level") + ":" + _upgrader.Level.ToString();
     }
 
     private void OnClicked()
     {
-        _priceText.text = _upgrader.Price.ToString();
-        _levelText.text = LeanLocalization.GetTranslationText("Level") + ":" + _upgrader.Level.ToString();
-
-        if (_isFirstCheck)
-        {
-            _isFirstCheck = false;
-            return;
-        }
-
+        UpdateView();
         Instantiate(_particles, _particlesPoint.position, Quaternion.identity).Play();
     }
 }

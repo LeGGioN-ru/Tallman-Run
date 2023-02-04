@@ -8,13 +8,19 @@ public class UpgraderAvalibleChecker : MonoBehaviour
     private void OnEnable()
     {
         foreach (Upgrader upgrader in _upgraders)
+        {
             upgrader.Clicked += Execute;
+            upgrader.SaveLoaded += Execute;
+        }
     }
 
     private void OnDisable()
     {
         foreach (Upgrader upgrader in _upgraders)
+        {
             upgrader.Clicked -= Execute;
+            upgrader.SaveLoaded -= Execute;
+        }
     }
 
     private void Execute()
