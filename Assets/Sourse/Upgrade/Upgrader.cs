@@ -8,7 +8,6 @@ public abstract class Upgrader : MonoBehaviour
     [SerializeField] private int _price;
     [SerializeField] private PlayerMoney _playerMoney;
     [SerializeField] private int _priceIncrease;
-    [SerializeField] private LevelSaver _levelSaver;
 
     private int _level;
     private Button _button;
@@ -62,7 +61,6 @@ public abstract class Upgrader : MonoBehaviour
         _price += _priceIncrease;
         _level++;
         Clicked?.Invoke();
-        _levelSaver.Execute();
     }
 
     protected abstract void Upgrade();

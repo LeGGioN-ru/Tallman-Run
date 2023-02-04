@@ -16,6 +16,20 @@ public class LevelSaver : GameSaver
             Execute();
     }
 
+    private void OnEnable()
+    {
+        _widthUpgrade.Clicked += Execute;
+        _speedUpgrade.Clicked += Execute;
+        _heightUpgrade.Clicked += Execute;
+    }
+
+    private void OnDisable()
+    {
+        _widthUpgrade.Clicked -= Execute;
+        _speedUpgrade.Clicked -= Execute;
+        _heightUpgrade.Clicked -= Execute;
+    }
+
     protected override Save GetSave()
     {
         return new Save(SceneManager.GetActiveScene().name, _playerMoney.AllMoney, _playerDeformation.StartHeight, _playerDeformation.StartWidth, _heightUpgrade.Level, _widthUpgrade.Level, _speedUpgrade.Level);
