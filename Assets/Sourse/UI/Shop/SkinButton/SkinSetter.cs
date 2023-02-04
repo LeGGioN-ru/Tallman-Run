@@ -11,6 +11,8 @@ public class SkinSetter : MonoBehaviour
     [SerializeField] private int _hatIndex;
     [SerializeField] private int _colorIndex;
 
+    public int ButtonIndex => _buttonIndex;
+
     private BuyButton _buyButton;
 
     private void Start()

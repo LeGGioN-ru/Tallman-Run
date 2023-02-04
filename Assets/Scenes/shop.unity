@@ -1899,6 +1899,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1002737325}
   m_CullTransparentMesh: 1
+--- !u!114 &1138270177 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3654507033652842129, guid: 450a1ce05c29d8b43b7a529ff50e5a44, type: 3}
+  m_PrefabInstance: {fileID: 815156211}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c23e5d3ddffadd94199cb73c3b78348b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1164392920
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3623,6 +3634,9 @@ GameObject:
   - component: {fileID: 2094998752}
   - component: {fileID: 2094998751}
   - component: {fileID: 2094998750}
+  - component: {fileID: 2094998754}
+  - component: {fileID: 2094998755}
+  - component: {fileID: 2094998756}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3714,3 +3728,46 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2094998754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094998749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27edac6c0d178104889c70c4a397ba23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2094998755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094998749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d245e8dbde4f9574b8425a572f9307ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerDeformation: {fileID: 1138270177}
+  _skinChanger: {fileID: 1913948988}
+  _playerMoney: {fileID: 1285380642}
+--- !u!114 &2094998756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094998749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2dacbed541b2341b2492d631aa53f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerDeformation: {fileID: 1138270177}
+  _unlockedSkins: {fileID: 1590857297}
+  _skinChanger: {fileID: 1913948988}
+  _playerMoney: {fileID: 1285380642}
