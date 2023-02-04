@@ -572,6 +572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 515313e9a8e58ab47b1dad6eea1b2293, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gate: {fileID: 204627314461053122}
   _addValueColor: {r: 0, g: 0.6, b: 0.9960785, a: 1}
   _reduceValueColor: {r: 1, g: 0, b: 0, a: 1}
   _alphaBottomPanel: 0.5
@@ -1113,7 +1114,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7526618059035592369, guid: d810b58d84c7f924b903868ae920630f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d810b58d84c7f924b903868ae920630f, type: 3}

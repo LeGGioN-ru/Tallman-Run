@@ -2,9 +2,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Gate))]
 public class GateView : MonoBehaviour
 {
+    [SerializeField] private Gate _gate;
     [SerializeField] private Color _addValueColor;
     [SerializeField] private Color _reduceValueColor;
     [SerializeField] private float _alphaBottomPanel;
@@ -16,13 +16,7 @@ public class GateView : MonoBehaviour
     [SerializeField] private Image _bottomPanel;
     [SerializeField] private TMP_Text _text;
 
-    private Gate _gate;
     private bool _isPositiveOrZeroValue => _gate.ValueDeformationChange >= 0;
-
-    private void Awake()
-    {
-        _gate = GetComponent<Gate>();
-    }
 
     private void Start()
     {

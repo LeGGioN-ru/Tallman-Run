@@ -60,7 +60,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 101921855737356819, guid: bc51dee6baf064f41b5bd0ddbc6b9fb1, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 204627314461053122, guid: bc51dee6baf064f41b5bd0ddbc6b9fb1, type: 3}
       propertyPath: _valueDeformationChange
@@ -197,7 +197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4357112062666955880, guid: bc51dee6baf064f41b5bd0ddbc6b9fb1, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4357112064253844824, guid: bc51dee6baf064f41b5bd0ddbc6b9fb1, type: 3}
       propertyPath: m_RootOrder
