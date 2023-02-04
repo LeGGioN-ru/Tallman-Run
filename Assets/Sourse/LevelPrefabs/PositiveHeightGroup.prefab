@@ -871,10 +871,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PositiveHeight
       objectReference: {fileID: 0}
-    - target: {fileID: 4288001774877055042, guid: f1b804addbec05440ba4f20858e2d537, type: 3}
-      propertyPath: _valueDeformationChange
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 4288001774877055043, guid: f1b804addbec05440ba4f20858e2d537, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -918,18 +914,6 @@ PrefabInstance:
     - target: {fileID: 4288001774877055043, guid: f1b804addbec05440ba4f20858e2d537, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4288001774877055069, guid: f1b804addbec05440ba4f20858e2d537, type: 3}
-      propertyPath: _moveSpeed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4288001774877055069, guid: f1b804addbec05440ba4f20858e2d537, type: 3}
-      propertyPath: _rotation.y
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 4288001774877055069, guid: f1b804addbec05440ba4f20858e2d537, type: 3}
-      propertyPath: _movePoints.Array.size
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4288001774877055069, guid: f1b804addbec05440ba4f20858e2d537, type: 3}
       propertyPath: _movePoints.Array.data[0]

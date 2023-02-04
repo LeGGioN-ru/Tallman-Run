@@ -871,10 +871,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: NegativeHeight
       objectReference: {fileID: 0}
-    - target: {fileID: 2900245299590558310, guid: ebb0d55941acbdc4e84c92dfdc26e793, type: 3}
-      propertyPath: _valueDeformationChange
-      value: -10
-      objectReference: {fileID: 0}
     - target: {fileID: 2900245299590558311, guid: ebb0d55941acbdc4e84c92dfdc26e793, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -918,18 +914,6 @@ PrefabInstance:
     - target: {fileID: 2900245299590558311, guid: ebb0d55941acbdc4e84c92dfdc26e793, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2900245299590558329, guid: ebb0d55941acbdc4e84c92dfdc26e793, type: 3}
-      propertyPath: _moveSpeed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2900245299590558329, guid: ebb0d55941acbdc4e84c92dfdc26e793, type: 3}
-      propertyPath: _rotation.y
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2900245299590558329, guid: ebb0d55941acbdc4e84c92dfdc26e793, type: 3}
-      propertyPath: _movePoints.Array.size
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2900245299590558329, guid: ebb0d55941acbdc4e84c92dfdc26e793, type: 3}
       propertyPath: _movePoints.Array.data[0]

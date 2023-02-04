@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 4288001774877055040}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.5934772, y: 0, z: 4.1711}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.7499999, y: 0.7499999, z: 0.7499999}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4537614702884580959}
@@ -47,9 +47,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b9a71fc39a72c84385885a50a8ba533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movePoints: []
-  _moveSpeed: 0
-  _rotation: {x: 0, y: 0, z: 0}
+  _movePoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  _moveSpeed: 2
+  _rotation: {x: 0, y: 20, z: 0}
 --- !u!114 &4288001774877055042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,7 +64,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: badc8291f6306284caba98a1cc8e7bde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _valueDeformationChange: 0
+  _valueDeformationChange: 10
   _directionDeformationChange: 1
 --- !u!65 &183476138195607066
 BoxCollider:

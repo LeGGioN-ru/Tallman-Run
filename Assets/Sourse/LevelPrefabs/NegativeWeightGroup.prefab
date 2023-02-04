@@ -524,18 +524,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 7955530054118738032}
     m_Modifications:
     - target: {fileID: 6581879523053918281, guid: e58c076484464584b9fe8418fc34e975, type: 3}
-      propertyPath: _moveSpeed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6581879523053918281, guid: e58c076484464584b9fe8418fc34e975, type: 3}
-      propertyPath: _rotation.y
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 6581879523053918281, guid: e58c076484464584b9fe8418fc34e975, type: 3}
-      propertyPath: _movePoints.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6581879523053918281, guid: e58c076484464584b9fe8418fc34e975, type: 3}
       propertyPath: _movePoints.Array.data[0]
       value: 
       objectReference: {fileID: 7955530053886603145}
@@ -546,10 +534,6 @@ PrefabInstance:
     - target: {fileID: 6581879523053918292, guid: e58c076484464584b9fe8418fc34e975, type: 3}
       propertyPath: m_Name
       value: NegativeWeight
-      objectReference: {fileID: 0}
-    - target: {fileID: 6581879523053918294, guid: e58c076484464584b9fe8418fc34e975, type: 3}
-      propertyPath: _valueDeformationChange
-      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 6581879523053918295, guid: e58c076484464584b9fe8418fc34e975, type: 3}
       propertyPath: m_RootOrder
