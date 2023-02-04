@@ -632,7 +632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2da38c520c8381d4998e97f3a48be769, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 4
+  _speed: 4.7
   _rotationSpeed: 0.4
   _rotationSpeedKeyBoard: 1
   _leftGroundBorder: -4
@@ -740,7 +740,9 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 8f9c93a34afd74d4faf53a1152c87c27, type: 2}
   - {fileID: 2100000, guid: f0fbd6384ef6d2d418481324ff576c5d, type: 2}
   _currentHat: {fileID: 0}
+  _currentHatIndex: 0
   _currentColor: {fileID: 0}
+  _currentColorIndex: 0
   _mesh: {fileID: 1110580040667697806}
 --- !u!1 &3654507033652842132
 GameObject:
