@@ -19,11 +19,16 @@ public class BuyButton : MonoBehaviour
             _button.enabled = false;
     }
 
-    public void Buy()
+    public void TurnOff()
     {
-        PlayerMoney.Instance.DecreaseMoney(_cost);
         _costText.enabled = false;
 
         this.enabled = false;
+    }
+
+    public void Buy()
+    {
+        PlayerMoney.Instance.DecreaseMoney(_cost);
+        TurnOff();
     }
 }

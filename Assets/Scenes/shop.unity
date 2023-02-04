@@ -993,8 +993,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 6d66de62ef0498540855d39307ad27d9, type: 2}
     - target: {fileID: 4723727904661685465, guid: 2679682c215337e48875f5a0b3d1d7c6, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -3982085264750867299, guid: 6d66de62ef0498540855d39307ad27d9, type: 2}
+    - target: {fileID: 4723727904661685465, guid: 2679682c215337e48875f5a0b3d1d7c6, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2679682c215337e48875f5a0b3d1d7c6, type: 3}
@@ -3480,6 +3484,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4723727904368957901, guid: 2679682c215337e48875f5a0b3d1d7c6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4723727904368957902, guid: 2679682c215337e48875f5a0b3d1d7c6, type: 3}
       propertyPath: _isHat
       value: 1
@@ -3492,6 +3500,10 @@ PrefabInstance:
       propertyPath: _unlockedSkins
       value: 
       objectReference: {fileID: 1590857297}
+    - target: {fileID: 4723727904368957939, guid: 2679682c215337e48875f5a0b3d1d7c6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4723727904368957942, guid: 2679682c215337e48875f5a0b3d1d7c6, type: 3}
       propertyPath: m_Name
       value: NewHead
@@ -3585,8 +3597,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 6d66de62ef0498540855d39307ad27d9, type: 2}
     - target: {fileID: 4723727904661685465, guid: 2679682c215337e48875f5a0b3d1d7c6, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -3982085264750867299, guid: 6d66de62ef0498540855d39307ad27d9, type: 2}
+    - target: {fileID: 4723727904661685465, guid: 2679682c215337e48875f5a0b3d1d7c6, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2679682c215337e48875f5a0b3d1d7c6, type: 3}

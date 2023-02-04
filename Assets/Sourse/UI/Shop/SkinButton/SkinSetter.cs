@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(BuyButton))]
 public class SkinSetter : MonoBehaviour
 {
     [SerializeField] private UnlockedSkins _unlockedSkins;
@@ -9,6 +10,18 @@ public class SkinSetter : MonoBehaviour
     [Header("Set hat number, if flag isHat true")]
     [SerializeField] private int _hatIndex;
     [SerializeField] private int _colorIndex;
+
+    private BuyButton _buyButton;
+
+    private void Start()
+    {
+        _buyButton = GetComponent<BuyButton>();
+    }
+
+    public void LoadSkinButton()
+    {
+        _buyButton.TurnOff();
+    }
 
     public void SetSkin()
     {
