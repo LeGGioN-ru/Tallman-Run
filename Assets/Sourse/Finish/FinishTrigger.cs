@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(AudioSource))]
 public class FinishTrigger : MonoBehaviour
@@ -6,6 +7,7 @@ public class FinishTrigger : MonoBehaviour
     [SerializeField] private ADShower _ad;
     [SerializeField] private GameObject _videoButton;
     [SerializeField] private ParticleSystem _confetti;
+    [SerializeField] private Button _continueButton;
 
     private AudioSource _audioSource;
 
@@ -23,6 +25,7 @@ public class FinishTrigger : MonoBehaviour
 
             _audioSource.Play();
             _confetti.Play();
+            _continueButton.gameObject.SetActive(true);
             _videoButton.SetActive(true);
             _ad.ShowAD();
         }
