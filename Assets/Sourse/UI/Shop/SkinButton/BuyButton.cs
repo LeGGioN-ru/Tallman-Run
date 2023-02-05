@@ -12,10 +12,28 @@ public class BuyButton : MonoBehaviour
 
     private void Start()
     {
+        PlayerMoney.Instance.MoneyCountChanged += (int money) =>
+        {
+            EnableButton(money);
+        };
+
         _button = GetComponent<Button>();
         _costText.text = _cost.ToString();
 
-        if (PlayerMoney.Instance.AllMoney <= _cost)
+        EnableButton(PlayerMoney.Instance.AllMoney);
+    }
+
+    private void OnDisable()
+    {
+        PlayerMoney.Instance.MoneyCountChanged -= (int money) =>
+        {
+            EnableButton(money);
+        };
+    }
+
+    private void EnableButton(int money)
+    {
+        if (money < _cost)
             _button.enabled = false;
     }
 
