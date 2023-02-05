@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -9,6 +10,8 @@ public class BuyButton : MonoBehaviour
     [SerializeField] private TMP_Text _costText;
 
     private Button _button;
+
+    public event Action ShinBuyed;
 
     private void Start()
     {
@@ -48,5 +51,7 @@ public class BuyButton : MonoBehaviour
     {
         PlayerMoney.Instance.DecreaseMoney(_cost);
         TurnOff();
+
+        ShinBuyed?.Invoke();
     }
 }
