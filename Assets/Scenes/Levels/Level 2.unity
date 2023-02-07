@@ -4855,6 +4855,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0899e603c46cdf43bd916f29c99a4f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _levelSaver: {fileID: 3596464352928297097}
 --- !u!1001 &2092031208
 PrefabInstance:
   m_ObjectHideFlags: 0

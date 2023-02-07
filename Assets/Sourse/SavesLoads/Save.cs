@@ -16,6 +16,7 @@ public class Save
     public int HeightLevel;
     public int WidthLevel;
     public int SpeedLevel;
+    public int LevelNumber;
 
     [JsonConstructor]
     public Save()
@@ -50,9 +51,14 @@ public class Save
 
         if (TryGetPreviosSave(out Save save))
         {
+            LevelNumber = save.LevelNumber + 1;
             UnlockedButtons = save.UnlockedButtons;
             CurrentHatIndex = save.CurrentHatIndex;
             CurrentColorIndex = save.CurrentColorIndex;
+        }
+        else
+        {
+            LevelNumber = 2;
         }
     }
 

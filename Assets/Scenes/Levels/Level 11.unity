@@ -1576,7 +1576,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!114 &705507996
 MonoBehaviour:
@@ -4527,6 +4527,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2850627593877962693, guid: c40c660c1b6af2c4597c6f59eaaea009, type: 3}
+      propertyPath: _levelSaver
+      value: 
+      objectReference: {fileID: 586253169}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c40c660c1b6af2c4597c6f59eaaea009, type: 3}
 --- !u!1001 &5649938985730015574

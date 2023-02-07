@@ -3,7 +3,7 @@ using UnityEngine;
 
 public abstract class GameSaver : MonoBehaviour
 {
-    protected abstract Save GetSave();
+    public abstract Save GetSave();
 
     public void Execute()
     {

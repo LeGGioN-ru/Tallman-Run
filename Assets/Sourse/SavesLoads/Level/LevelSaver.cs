@@ -30,7 +30,7 @@ public class LevelSaver : GameSaver
         _heightUpgrade.Clicked -= Execute;
     }
 
-    protected override Save GetSave()
+    public override Save GetSave()
     {
         return new Save(SceneManager.GetActiveScene().name, _playerMoney.AllMoney, _playerDeformation.StartHeight, _playerDeformation.StartWidth, _heightUpgrade.Level, _widthUpgrade.Level, _speedUpgrade.Level);
     }
