@@ -1580,7 +1580,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!114 &705507996
 MonoBehaviour:
@@ -4755,6 +4755,10 @@ PrefabInstance:
     - target: {fileID: 2274920291581250770, guid: c40c660c1b6af2c4597c6f59eaaea009, type: 3}
       propertyPath: m_Name
       value: Continue
+      objectReference: {fileID: 0}
+    - target: {fileID: 2274920291581250772, guid: c40c660c1b6af2c4597c6f59eaaea009, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2274920291581250773, guid: c40c660c1b6af2c4597c6f59eaaea009, type: 3}
       propertyPath: m_Pivot.x
