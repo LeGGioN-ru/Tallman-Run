@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.060853243, g: 0.5761847, b: 0.8594031, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -405,8 +405,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0cf363da515ca74a8f969eb8426e59e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerMover: {fileID: 1279442527}
-  _moveAnimationsController: {fileID: 1279442528}
+  _playerBehaviour: {fileID: 0}
+  _shopButton: {fileID: 0}
+  _upgrades: {fileID: 0}
 --- !u!1 &160072009
 GameObject:
   m_ObjectHideFlags: 0
@@ -1294,8 +1295,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0cf363da515ca74a8f969eb8426e59e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerMover: {fileID: 1279442527}
-  _moveAnimationsController: {fileID: 1279442528}
+  _playerBehaviour: {fileID: 0}
+  _shopButton: {fileID: 0}
+  _upgrades: {fileID: 0}
 --- !u!114 &837539580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1821,39 +1823,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3654507032097643714, guid: 450a1ce05c29d8b43b7a529ff50e5a44, type: 3}
   m_PrefabInstance: {fileID: 3654507033234399900}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1279442527 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3654507032097643715, guid: 450a1ce05c29d8b43b7a529ff50e5a44, type: 3}
-  m_PrefabInstance: {fileID: 3654507033234399900}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2da38c520c8381d4998e97f3a48be769, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1279442528 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3654507032097643772, guid: 450a1ce05c29d8b43b7a529ff50e5a44, type: 3}
-  m_PrefabInstance: {fileID: 3654507033234399900}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4b74f12db6ccd44f94454f75cc349b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1279442530 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3654507032097643774, guid: 450a1ce05c29d8b43b7a529ff50e5a44, type: 3}
-  m_PrefabInstance: {fileID: 3654507033234399900}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5483e659ec99640408a0b5b7378c4eae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1374705390
 GameObject:
   m_ObjectHideFlags: 0
@@ -1989,6 +1958,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1374705390}
   m_CullTransparentMesh: 1
+--- !u!1 &1397506550
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1397506552}
+  - component: {fileID: 1397506551}
+  m_Layer: 0
+  m_Name: TypedProcessor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1397506551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397506550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b75bc3aeafff29d4294a27937966d3bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1397506552
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397506550}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1652887260
 GameObject:
   m_ObjectHideFlags: 0
@@ -2215,7 +2228,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 753a28b4782ae3b469bf2e76f25c7cfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerMoney: {fileID: 1279442530}
   _moneyText: {fileID: 1374705392}
 --- !u!4 &1955741092 stripped
 Transform:

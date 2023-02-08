@@ -11,4 +11,15 @@ public abstract class GameSaver : MonoBehaviour
         PlayerPrefs.SetString(SaveConstants.Save, JsonConvert.SerializeObject(save));
         PlayerPrefs.Save();
     }
+
+    public static void Execute(Save save)
+    {
+        PlayerPrefs.SetString(SaveConstants.Save, JsonConvert.SerializeObject(save));
+        PlayerPrefs.Save();
+    }
+
+    public static Save GetPreviosSave()
+    {
+        return JsonConvert.DeserializeObject<Save>(PlayerPrefs.GetString(SaveConstants.Save));
+    }
 }
