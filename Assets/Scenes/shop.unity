@@ -3539,6 +3539,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a57b994588440c4da7f12b0584507e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1972900205 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2830382018753478029, guid: cf561a3947dd4834fb229bdb08461a3a, type: 3}
+  m_PrefabInstance: {fileID: 2830382019850237497}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ce35802dd4571547ba3491783df0b85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2003757980
 GameObject:
   m_ObjectHideFlags: 0
@@ -3685,6 +3696,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f87ed146915e864e915a88bc0ca5e35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _shopSaver: {fileID: 1972900205}
 --- !u!1001 &2014250663
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4064,6 +4076,10 @@ PrefabInstance:
       propertyPath: _skinChanger
       value: 
       objectReference: {fileID: 1913948988}
+    - target: {fileID: 2830382018753478026, guid: cf561a3947dd4834fb229bdb08461a3a, type: 3}
+      propertyPath: _unlockedSkins
+      value: 
+      objectReference: {fileID: 1590857297}
     - target: {fileID: 2830382018753478026, guid: cf561a3947dd4834fb229bdb08461a3a, type: 3}
       propertyPath: _skinSettersLoader
       value: 

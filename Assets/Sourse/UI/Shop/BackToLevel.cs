@@ -1,19 +1,14 @@
-using IJunior.TypedScenes;
 using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class BackToLevel : MonoBehaviour
 {
+    [SerializeField] private ShopSaver _shopSaver;
+
     public void OnLevel()
     {
-        try
-        {
-            SceneManager.LoadScene(JsonConvert.DeserializeObject<Save>(PlayerPrefs.GetString(SaveConstants.Save)).CurrentScene);
-        }
-        catch (System.Exception)
-        {
-            Level_1.Load();
-        }
+        _shopSaver.Execute();
+        SceneManager.LoadScene(JsonConvert.DeserializeObject<Save>(PlayerPrefs.GetString(SaveConstants.Save)).CurrentScene);
     }
 }

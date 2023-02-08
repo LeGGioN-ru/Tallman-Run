@@ -9,10 +9,9 @@ public class ShopButton : MonoBehaviour
         Save save = GameSaver.GetCurrentSave();
         if (save != null)
         {
-            save.CurrentScene = SceneManager.GetActiveScene().name;
             GameSaver.Execute(save);
+            save.CurrentScene = SceneManager.GetActiveScene().name;
         }
-
         shop.Load();
     }
 }

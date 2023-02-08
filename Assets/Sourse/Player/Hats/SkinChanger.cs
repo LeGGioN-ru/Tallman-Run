@@ -12,11 +12,8 @@ public class SkinChanger : MonoBehaviour
     [SerializeField] private int _currentColorIndex;
     [SerializeField] private SkinnedMeshRenderer _mesh;
 
-
     public int CurrentHatIndex => _currentHatIndex;
     public int CurrentColorIndex => _currentColorIndex;
-
-    public Action SkinChanged;
 
     public void LoadSkin(int? colorIndex, int? hatIndex)
     {
@@ -43,8 +40,6 @@ public class SkinChanger : MonoBehaviour
         _hats[newHatIndex].gameObject.SetActive(true);
         _currentHat = _hats[newHatIndex];
         _currentHatIndex = newHatIndex;
-
-        SkinChanged?.Invoke();
     }
 
     public void SetNewColor(int newColorIndex)
@@ -52,7 +47,5 @@ public class SkinChanger : MonoBehaviour
         _mesh.material = _colors[newColorIndex];
         _currentColor = _colors[newColorIndex];
         _currentColorIndex = newColorIndex;
-
-        SkinChanged?.Invoke();
     }
 }
