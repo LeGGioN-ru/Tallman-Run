@@ -1648,6 +1648,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1913948988, guid: 450a1ce05c29d8b43b7a529ff50e5a44, type: 3}
+      propertyPath: _playerDeformation
+      value: 
+      objectReference: {fileID: 815156213}
+    - target: {fileID: 1913948988, guid: 450a1ce05c29d8b43b7a529ff50e5a44, type: 3}
+      propertyPath: _deformationColorView
+      value: 
+      objectReference: {fileID: 1938346738}
     - target: {fileID: 3654507032097643713, guid: 450a1ce05c29d8b43b7a529ff50e5a44, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3853,6 +3861,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74868be0533eae243ab4c4e7be4ee1aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1938346738 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3654507033652842128, guid: 450a1ce05c29d8b43b7a529ff50e5a44, type: 3}
+  m_PrefabInstance: {fileID: 815156211}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcfa17c2e0127ff4fa465c51fdb9e102, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2032633094 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3654507032097643715, guid: 450a1ce05c29d8b43b7a529ff50e5a44, type: 3}
@@ -4222,7 +4241,7 @@ PrefabInstance:
       objectReference: {fileID: 815156213}
     - target: {fileID: 3596464352592636672, guid: 498683f014d892f41a6f03b5a958456e, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3596464352592636672, guid: 498683f014d892f41a6f03b5a958456e, type: 3}
       propertyPath: _playerMoney

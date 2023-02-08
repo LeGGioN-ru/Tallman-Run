@@ -62,4 +62,9 @@ public class DeformationColorView : MonoBehaviour
         _time = 0;
         _coroutine = null;
     }
+
+    public void SetNewColor(Color newColor)
+    {
+        _startColor = newColor;
+    }
 }

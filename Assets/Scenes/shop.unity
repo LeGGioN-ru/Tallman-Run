@@ -1252,6 +1252,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Money
       objectReference: {fileID: 0}
+    - target: {fileID: 5649938987069069222, guid: 018459be5557d1040aefb1dc75766f27, type: 3}
+      propertyPath: m_text
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 018459be5557d1040aefb1dc75766f27, type: 3}
 --- !u!224 &661309004 stripped
@@ -1381,6 +1385,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1913948988, guid: 450a1ce05c29d8b43b7a529ff50e5a44, type: 3}
+      propertyPath: _deformationColorView
+      value: 
+      objectReference: {fileID: 815156212}
     - target: {fileID: 3654507032097643713, guid: 450a1ce05c29d8b43b7a529ff50e5a44, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1431,6 +1439,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 450a1ce05c29d8b43b7a529ff50e5a44, type: 3}
+--- !u!114 &815156212 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3654507033652842128, guid: 450a1ce05c29d8b43b7a529ff50e5a44, type: 3}
+  m_PrefabInstance: {fileID: 815156211}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcfa17c2e0127ff4fa465c51fdb9e102, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &827102235
 GameObject:
   m_ObjectHideFlags: 0
@@ -2656,8 +2675,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5483e659ec99640408a0b5b7378c4eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _allMoney: 500
-  _moneyCollectedOnLevel: 0
 --- !u!1 &1337347200
 GameObject:
   m_ObjectHideFlags: 0

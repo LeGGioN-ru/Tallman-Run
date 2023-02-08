@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SkinChanger : MonoBehaviour
 {
+    [SerializeField] private DeformationColorView _deformationColorView;
     [SerializeField] private List<GameObject> _hats;
     [SerializeField] private List<Material> _colors;
     [SerializeField] private GameObject _currentHat;
@@ -22,6 +23,8 @@ public class SkinChanger : MonoBehaviour
             _mesh.material = _colors[colorIndex.Value];
             _currentColor = _colors[colorIndex.Value];
             _currentColorIndex = colorIndex.Value;
+
+            _deformationColorView.SetNewColor(_colors[colorIndex.Value].color);
         }
 
         if (hatIndex.HasValue)
