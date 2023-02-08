@@ -20,14 +20,20 @@ public class FinishTrigger : MonoBehaviour
     {
         if (other.TryGetComponent(out PlayerBehaviour playerBehaviour))
         {
-            GameAnalyticsEvents.Instace.OnLevelFinishGA();
             playerBehaviour.StartFinish();
 
-            _audioSource.Play();
-            _confetti.Play();
-            _continueButton.gameObject.SetActive(true);
-            _videoButton.SetActive(true);
-            _ad.ShowAD();
+            WinGame();
         }
+    }
+
+    public void WinGame()
+    {
+        GameAnalyticsEvents.Instace.OnLevelFinishGA();
+
+        _audioSource.Play();
+        _confetti.Play();
+        _continueButton.gameObject.SetActive(true);
+        _videoButton.SetActive(true);
+        _ad.ShowAD();
     }
 }

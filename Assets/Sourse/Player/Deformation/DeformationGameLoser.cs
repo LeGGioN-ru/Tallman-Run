@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(PlayerDeformation))]
@@ -8,6 +9,8 @@ public class DeformationGameLoser : MonoBehaviour
     [SerializeField] private Animator _animator;
 
     private PlayerDeformation _playerDeformation;
+
+    public event Action PlayerDead;
 
     private void Awake()
     {
@@ -28,6 +31,8 @@ public class DeformationGameLoser : MonoBehaviour
     {
         if (_playerDeformation.EndWidth < 0 || _playerDeformation.EndHeight < 0)
         {
+            PlayerDead.Invoke();
+
             _playerBehaviour.Stop();
             _animator.Play(PlayerAnimationsController.States.Death);
         }

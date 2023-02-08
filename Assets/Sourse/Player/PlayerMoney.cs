@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class PlayerMoney : MonoBehaviour
 {
-    [SerializeField] private int _allMoney = 0;
-    [SerializeField] private int _moneyCollectedOnLevel = 0;
+    private int _allMoney;
+    private int _moneyCollectedOnLevel;
 
     public int AllMoney => _allMoney;
     public int MomeyCollectedOnLevel => _moneyCollectedOnLevel;
