@@ -41,7 +41,6 @@ public class BuyButton : MonoBehaviour
     public void TurnOff()
     {
         _costText.enabled = false;
-
         this.enabled = false;
     }
 
