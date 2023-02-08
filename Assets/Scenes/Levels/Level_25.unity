@@ -5032,6 +5032,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2850627593877962693, guid: c40c660c1b6af2c4597c6f59eaaea009, type: 3}
+      propertyPath: _gameSaver
+      value: 
+      objectReference: {fileID: 586253169}
+    - target: {fileID: 2850627593877962693, guid: c40c660c1b6af2c4597c6f59eaaea009, type: 3}
       propertyPath: _levelSaver
       value: 
       objectReference: {fileID: 586253169}

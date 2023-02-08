@@ -8,6 +8,9 @@ public class ShopLoader : GameLoader
 
     protected override void Execute(Save save)
     {
+        if (save == null)
+            return;
+
         _skinChanger.LoadSkin(save.CurrentColorIndex, save.CurrentHatIndex);
         _skinSettersLoader.Execute(save.UnlockedButtons == null ? null : save.UnlockedButtons);
         _playerMoney.LoadMoney(save.Money);

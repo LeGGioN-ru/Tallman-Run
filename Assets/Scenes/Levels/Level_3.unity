@@ -2157,6 +2157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelSaver: {fileID: 1558183512}
+  _gameSaver: {fileID: 1558183512}
 --- !u!1 &1040484631
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,8 +7,12 @@ public class ShopButton : MonoBehaviour
     public void OnShopButton()
     {
         Save save = GameSaver.GetCurrentSave();
-        save.CurrentScene = SceneManager.GetActiveScene().name;
-        GameSaver.Execute(save);
+        if (save != null)
+        {
+            save.CurrentScene = SceneManager.GetActiveScene().name;
+            GameSaver.Execute(save);
+        }
+
         shop.Load();
     }
 }
