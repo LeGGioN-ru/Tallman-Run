@@ -11,6 +11,15 @@ public class SkinSettersLoader : MonoBehaviour
         if (openedButtons == null)
             return;
 
+        foreach (var item in openedButtons)
+        {
+        }
+
+        foreach (var item in _skinSetters)
+        {
+            Debug.Log($"Скин -> {item.ButtonIndex}");
+        }
+
         foreach (SkinSetter skin in _skinSetters)
             if (openedButtons.Contains(skin.ButtonIndex))
                 skin.LoadSkinButton();

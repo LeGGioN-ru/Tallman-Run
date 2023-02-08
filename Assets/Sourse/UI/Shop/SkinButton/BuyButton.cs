@@ -11,8 +11,6 @@ public class BuyButton : MonoBehaviour
 
     private Button _button;
 
-    public event Action ShinBuyed;
-
     private void Start()
     {
         PlayerMoney.Instance.MoneyCountChanged += (int money) =>
@@ -51,7 +49,5 @@ public class BuyButton : MonoBehaviour
     {
         PlayerMoney.Instance.DecreaseMoney(_cost);
         TurnOff();
-
-        ShinBuyed?.Invoke();
     }
 }

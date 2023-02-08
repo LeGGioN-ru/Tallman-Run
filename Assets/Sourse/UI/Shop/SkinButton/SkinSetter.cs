@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(BuyButton))]
@@ -15,7 +16,7 @@ public class SkinSetter : MonoBehaviour
 
     private BuyButton _buyButton;
 
-    private void Start()
+    private void Awake()
     {
         _buyButton = GetComponent<BuyButton>();
     }

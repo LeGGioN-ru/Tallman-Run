@@ -5,23 +5,17 @@ public class ShopSaver : GameSaver
     [SerializeField] private UnlockedSkins _unlockedSkins;
     [SerializeField] private SkinChanger _skinChanger;
     [SerializeField] private PlayerMoney _playerMoney;
-    [SerializeField] private BuyButton[] _buyButtons;
 
     private void OnEnable()
     {
-        foreach (var buyButton in _buyButtons)
-            buyButton.ShinBuyed += OnSkinBuyed;
+        _unlockedSkins.SkinUnlocked += Execute;
+        _skinChanger.SkinChanged += Execute;
     }
 
     private void OnDisable()
     {
-        foreach (var buyButton in _buyButtons)
-            buyButton.ShinBuyed -= OnSkinBuyed;
-    }
-
-    private void OnSkinBuyed()
-    {
-        Execute();
+        _unlockedSkins.SkinUnlocked -= Execute;
+        _skinChanger.SkinChanged -= Execute;
     }
 
     public override Save GetSave()
