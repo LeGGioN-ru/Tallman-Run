@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.060853243, g: 0.5761847, b: 0.8594031, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -556,7 +556,7 @@ PrefabInstance:
     - target: {fileID: 3302779, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
       propertyPath: _levelSaver
       value: 
-      objectReference: {fileID: 586253169}
+      objectReference: {fileID: 0}
     - target: {fileID: 3302779, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
       propertyPath: _playerMoney
       value: 
@@ -600,7 +600,7 @@ PrefabInstance:
     - target: {fileID: 4378080429286081267, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
       propertyPath: _levelSaver
       value: 
-      objectReference: {fileID: 586253169}
+      objectReference: {fileID: 0}
     - target: {fileID: 4378080429286081267, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
       propertyPath: _playerMoney
       value: 
@@ -720,7 +720,7 @@ PrefabInstance:
     - target: {fileID: 8480811427969504848, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
       propertyPath: _levelSaver
       value: 
-      objectReference: {fileID: 586253169}
+      objectReference: {fileID: 0}
     - target: {fileID: 8480811427969504848, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
       propertyPath: _playerMoney
       value: 
@@ -935,17 +935,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 1913948972}
---- !u!114 &586253169 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3596464352592636673, guid: 498683f014d892f41a6f03b5a958456e, type: 3}
-  m_PrefabInstance: {fileID: 301850020933814608}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd2e29be5c2e1de4fb636c198de8351b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &688967282
 GameObject:
   m_ObjectHideFlags: 0
@@ -3451,8 +3440,27 @@ PrefabInstance:
       propertyPath: _playerDeformation
       value: 
       objectReference: {fileID: 815156213}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3596464352592636672, guid: 498683f014d892f41a6f03b5a958456e, type: 3}
+    - {fileID: 3596464352592636673, guid: 498683f014d892f41a6f03b5a958456e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 498683f014d892f41a6f03b5a958456e, type: 3}
+--- !u!1 &301850020933814609 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3880229005731254411, guid: 498683f014d892f41a6f03b5a958456e, type: 3}
+  m_PrefabInstance: {fileID: 301850020933814608}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &301850020933814610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301850020933814609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c300561e9417834aba0cc03e79f7a88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1244487179512185773
 PrefabInstance:
   m_ObjectHideFlags: 0

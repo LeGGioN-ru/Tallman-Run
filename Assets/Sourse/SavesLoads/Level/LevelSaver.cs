@@ -14,6 +14,15 @@ public class LevelSaver : GameSaver
     {
         if (_isStartSave)
             Execute();
+        else
+            SaveCurrentScene();
+    }
+
+    private void SaveCurrentScene()
+    {
+        Save save = GetCurrentSave();
+        save.CurrentScene = SceneManager.GetActiveScene().name;
+        Execute(save);
     }
 
     private void OnEnable()
