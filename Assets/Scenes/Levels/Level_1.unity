@@ -1259,7 +1259,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 301850020933814608}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 927805932}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd2e29be5c2e1de4fb636c198de8351b, type: 3}
   m_Name: 
@@ -2159,7 +2159,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 927805932}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1daaadbbf1dc69b4e9e97ba21af42a3e, type: 3}
   m_Name: 
@@ -4212,7 +4212,7 @@ PrefabInstance:
       objectReference: {fileID: 815156213}
     - target: {fileID: 3596464352592636673, guid: 498683f014d892f41a6f03b5a958456e, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3596464352592636673, guid: 498683f014d892f41a6f03b5a958456e, type: 3}
       propertyPath: _isStartSave

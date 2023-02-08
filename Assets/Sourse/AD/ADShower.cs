@@ -54,11 +54,17 @@ public class ADShower : MonoBehaviour
 
     public void ShowRewardedAD()
     {
+#if !UNITY_WEBGL || UNITY_EDITOR
+        return;
+#endif
         VideoAd.Show(OnVideoOpened, OnRewardedCallback);
     }
 
     public void ShowAD()
     {
+#if !UNITY_WEBGL || UNITY_EDITOR
+         return;
+#endif
         InterstitialAd.Show();
     }
 }

@@ -48,6 +48,6 @@ public class LevelSaver : GameSaver
 
     private void OnActiveSceneChanged(Scene scene, Scene scondScene)
     {
-        Execute(GetCurrentSave());
+        //Execute(GetCurrentSave());
     }
 }
