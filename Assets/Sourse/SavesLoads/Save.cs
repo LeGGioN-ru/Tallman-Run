@@ -36,6 +36,7 @@ public class Save
             StartHeight = save.StartHeight;
             StartWidth = save.StartWidth;
             CurrentScene = save.CurrentScene;
+            LevelNumber = save.LevelNumber;
         }
     }
 
@@ -51,15 +52,30 @@ public class Save
 
         if (TryGetPreviosSave(out Save save))
         {
-            LevelNumber = save.LevelNumber + 1;
             UnlockedButtons = save.UnlockedButtons;
             CurrentHatIndex = save.CurrentHatIndex;
             CurrentColorIndex = save.CurrentColorIndex;
+            LevelNumber = save.LevelNumber;
         }
         else
         {
-            LevelNumber = 2;
+            LevelNumber = 1;
         }
+    }
+
+    public Save(Save save)
+    {
+        CurrentHatIndex = save.CurrentHatIndex;
+        CurrentColorIndex = save.CurrentColorIndex;
+        CurrentScene = save.CurrentScene;
+        Money = save.Money;
+        UnlockedButtons = save.UnlockedButtons;
+        StartHeight = save.StartHeight;
+        StartWidth = save.StartWidth;
+        HeightLevel = save.HeightLevel;
+        WidthLevel = save.WidthLevel;
+        SpeedLevel = save.SpeedLevel;
+        LevelNumber = save.LevelNumber;
     }
 
     private bool TryGetPreviosSave(out Save save)
