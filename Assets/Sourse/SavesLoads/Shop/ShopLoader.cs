@@ -11,6 +11,6 @@ public class ShopLoader : GameLoader
     {
         _skinChanger.LoadSkin(save.CurrentColorIndex, save.CurrentHatIndex);
         _skinSettersLoader.Execute(save.UnlockedButtons ?? null);
-        _playerMoney.LoadMoney(10000);
+        _playerMoney.LoadMoney(save.Money);
     }
 }

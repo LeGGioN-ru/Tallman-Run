@@ -15,13 +15,14 @@ public class SkinSetter : MonoBehaviour
 
     private BuyButton _buyButton;
 
-    private void Awake()
+    private void Start()
     {
         _buyButton = GetComponent<BuyButton>();
     }
 
     public void LoadSkinButton()
     {
+        _buyButton = GetComponent<BuyButton>();
         _buyButton.TurnOff();
     }
 

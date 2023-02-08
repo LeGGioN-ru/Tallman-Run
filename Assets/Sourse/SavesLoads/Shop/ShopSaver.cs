@@ -8,8 +8,6 @@ public class ShopSaver : GameSaver
 
     public override Save GetSave()
     {
-        Debug.Log($"Текущая шапка -> {_skinChanger.CurrentHatIndex} Текущий цвет -> {_skinChanger.CurrentColorIndex} Количество открытых кнопок ->{_unlockedSkins.UnlockedButtons.Count}");
-
         return new Save(_skinChanger.CurrentHatIndex, _skinChanger.CurrentColorIndex, _playerMoney.AllMoney, _unlockedSkins.UnlockedButtons);
     }
 }
