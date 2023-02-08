@@ -37,6 +37,9 @@ public class Save
             StartWidth = save.StartWidth;
             CurrentScene = save.CurrentScene;
             LevelNumber = save.LevelNumber;
+            HeightLevel = save.HeightLevel;
+            WidthLevel = save.WidthLevel;
+            SpeedLevel = save.SpeedLevel;
         }
     }
 
