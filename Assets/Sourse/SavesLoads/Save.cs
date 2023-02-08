@@ -6,8 +6,8 @@ using UnityEngine;
 [Serializable]
 public class Save
 {
-    public int CurrentHatIndex;
-    public int CurrentColorIndex;
+    public int? CurrentHatIndex;
+    public int? CurrentColorIndex;
     public string CurrentScene;
     public int Money;
     public IReadOnlyList<int> UnlockedButtons;

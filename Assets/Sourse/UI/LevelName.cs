@@ -10,6 +10,6 @@ public class LevelName : MonoBehaviour
     private void Start()
     {
         _levelName = GetComponent<TMP_Text>();
-        _levelName.text = $"{LeanLocalization.GetTranslationText("Level")} {GameSaver.GetCurrentSave().LevelNumber}";
+        _levelName.text = $"{LeanLocalization.GetTranslationText("Level")} {(GameSaver.GetCurrentSave() != null ? GameSaver.GetCurrentSave().LevelNumber : 1)}";
     }
 }

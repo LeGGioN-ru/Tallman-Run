@@ -14,16 +14,21 @@ public class SkinChanger : MonoBehaviour
     public int CurrentHatIndex => _currentHatIndex;
     public int CurrentColorIndex => _currentColorIndex;
 
-    public void LoadSkin(int colorIndex, int hatIndex)
+    public void LoadSkin(int? colorIndex, int? hatIndex)
     {
-        _mesh.material = _colors[colorIndex];
-        _hats[hatIndex].SetActive(true);
+        if (colorIndex.HasValue)
+        {
+            _mesh.material = _colors[colorIndex.Value];
+            _currentColor = _colors[colorIndex.Value];
+            _currentColorIndex = colorIndex.Value;
+        }
 
-        _currentHat = _hats[hatIndex];
-        _currentColor = _colors[colorIndex];
-
-        _currentHatIndex = hatIndex;
-        _currentColorIndex = colorIndex;
+        if (hatIndex.HasValue)
+        {
+            _hats[hatIndex.Value].SetActive(true);
+            _currentHat = _hats[hatIndex.Value];
+            _currentHatIndex = hatIndex.Value;
+        }
     }
 
     public void SetNewHat(int newHatIndex)

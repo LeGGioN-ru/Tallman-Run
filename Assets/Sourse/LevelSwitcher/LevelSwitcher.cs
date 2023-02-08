@@ -59,6 +59,6 @@ public class LevelSwitcher : MonoBehaviour
             }
         }
 
-        SceneManager.LoadScene($"Level_{Random.Range(0, _levels.Count)}");
+        SceneManager.LoadScene($"Level_{Random.Range(2, _levels.Count)}");
     }
 }
