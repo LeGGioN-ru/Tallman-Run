@@ -4191,6 +4191,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 30157477}
     - target: {fileID: 3596464352592636672, guid: 498683f014d892f41a6f03b5a958456e, type: 3}
+      propertyPath: _skinChanger
+      value: 
+      objectReference: {fileID: 815156214}
+    - target: {fileID: 3596464352592636672, guid: 498683f014d892f41a6f03b5a958456e, type: 3}
       propertyPath: _speedUpgrade
       value: 
       objectReference: {fileID: 1143097275}

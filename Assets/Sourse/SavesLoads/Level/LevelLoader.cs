@@ -7,6 +7,7 @@ public class LevelLoader : GameLoader
     [SerializeField] private WidthUpgrade _widthUpgrade;
     [SerializeField] private HeightUpgrade _heightUpgrade;
     [SerializeField] private PlayerMoney _playerMoney;
+    [SerializeField] private SkinChanger _skinChanger;
 
     protected override void Execute(Save save)
     {
@@ -15,5 +16,6 @@ public class LevelLoader : GameLoader
         _heightUpgrade.LoadLevel(save.HeightLevel);
         _speedUpgrade.LoadLevel(save.SpeedLevel);
         _widthUpgrade.LoadLevel(save.WidthLevel);
+        _skinChanger.LoadSkin(save.CurrentColorIndex, save.CurrentHatIndex);
     }
 }

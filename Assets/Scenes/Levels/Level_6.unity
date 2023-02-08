@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.83880925, g: 0.21071261, b: 0.30614007, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4816,6 +4816,10 @@ PrefabInstance:
       propertyPath: _playerMoney
       value: 
       objectReference: {fileID: 30157477}
+    - target: {fileID: 3596464352592636672, guid: 498683f014d892f41a6f03b5a958456e, type: 3}
+      propertyPath: _skinChanger
+      value: 
+      objectReference: {fileID: 815156214}
     - target: {fileID: 3596464352592636672, guid: 498683f014d892f41a6f03b5a958456e, type: 3}
       propertyPath: _speedUpgrade
       value: 

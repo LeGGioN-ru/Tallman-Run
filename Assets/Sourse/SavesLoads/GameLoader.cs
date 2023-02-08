@@ -1,11 +1,10 @@
-using Newtonsoft.Json;
 using UnityEngine;
 
 public abstract class GameLoader : MonoBehaviour
 {
     private void Start()
     {
-        Save save = JsonConvert.DeserializeObject<Save>(PlayerPrefs.GetString(SaveConstants.Save));
+        Save save = GameSaver.GetCurrentSave();
         Execute(save);
     }
 

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.060853243, g: 0.5761847, b: 0.8594031, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2235,6 +2235,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c23e5d3ddffadd94199cb73c3b78348b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &815156214 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1913948988, guid: 450a1ce05c29d8b43b7a529ff50e5a44, type: 3}
+  m_PrefabInstance: {fileID: 815156211}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a57b994588440c4da7f12b0584507e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &836559243
@@ -5590,6 +5601,10 @@ PrefabInstance:
       propertyPath: _playerMoney
       value: 
       objectReference: {fileID: 30157477}
+    - target: {fileID: 3596464352592636672, guid: 498683f014d892f41a6f03b5a958456e, type: 3}
+      propertyPath: _skinChanger
+      value: 
+      objectReference: {fileID: 815156214}
     - target: {fileID: 3596464352592636672, guid: 498683f014d892f41a6f03b5a958456e, type: 3}
       propertyPath: _speedUpgrade
       value: 

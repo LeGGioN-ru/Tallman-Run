@@ -30,6 +30,7 @@ public class LevelSaver : GameSaver
         _widthUpgrade.Clicked += Execute;
         _speedUpgrade.Clicked += Execute;
         _heightUpgrade.Clicked += Execute;
+        SceneManager.activeSceneChanged += OnActiveSceneChanged;
     }
 
     private void OnDisable()
@@ -37,10 +38,16 @@ public class LevelSaver : GameSaver
         _widthUpgrade.Clicked -= Execute;
         _speedUpgrade.Clicked -= Execute;
         _heightUpgrade.Clicked -= Execute;
+        SceneManager.activeSceneChanged -= OnActiveSceneChanged;
     }
 
     public override Save GetSave()
     {
         return new Save(SceneManager.GetActiveScene().name, _playerMoney.AllMoney, _playerDeformation.StartHeight, _playerDeformation.StartWidth, _heightUpgrade.Level, _widthUpgrade.Level, _speedUpgrade.Level);
+    }
+
+    private void OnActiveSceneChanged(Scene scene, Scene scondScene)
+    {
+        Execute(GetCurrentSave());
     }
 }
