@@ -18,7 +18,7 @@ public class SkinChanger : MonoBehaviour
 
     public void LoadSkin(int? colorIndex, int? hatIndex)
     {
-        if (colorIndex.HasValue && colorIndex > 0)
+        if (colorIndex.HasValue)
         {
             _mesh.material = _colors[colorIndex.Value];
             _currentColor = _colors[colorIndex.Value];
@@ -27,7 +27,7 @@ public class SkinChanger : MonoBehaviour
             _deformationColorView.SetNewColor(_colors[colorIndex.Value].color);
         }
 
-        if (hatIndex.HasValue && hatIndex > 0)
+        if (hatIndex.HasValue)
         {
             _hats[hatIndex.Value].SetActive(true);
             _currentHat = _hats[hatIndex.Value];
