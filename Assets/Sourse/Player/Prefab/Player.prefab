@@ -1858,6 +1858,18 @@ PrefabInstance:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 19882250, guid: 7e6e01c0c20de794baa7cc6468800f1c, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19882250, guid: 7e6e01c0c20de794baa7cc6468800f1c, type: 3}
+      propertyPath: InitialModule.startRotationX.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19882250, guid: 7e6e01c0c20de794baa7cc6468800f1c, type: 3}
+      propertyPath: InitialModule.startRotationY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 19915954, guid: 7e6e01c0c20de794baa7cc6468800f1c, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -1932,6 +1944,18 @@ PrefabInstance:
     - target: {fileID: 479774, guid: 9c1c1f95a92794241b1df059997c2436, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19873460, guid: 9c1c1f95a92794241b1df059997c2436, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19873460, guid: 9c1c1f95a92794241b1df059997c2436, type: 3}
+      propertyPath: InitialModule.startRotationX.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19873460, guid: 9c1c1f95a92794241b1df059997c2436, type: 3}
+      propertyPath: InitialModule.startRotationY.minMaxState
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 19892030, guid: 9c1c1f95a92794241b1df059997c2436, type: 3}
       propertyPath: playOnAwake
