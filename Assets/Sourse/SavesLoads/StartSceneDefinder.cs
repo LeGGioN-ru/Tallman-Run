@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using Agava.YandexGames;
 using Lean.Localization;
 
+[RequireComponent(typeof(LoadScreenStarter))]
 public class StartSceneDefinder : MonoBehaviour
 {
     private IEnumerator Start()
@@ -19,9 +20,12 @@ public class StartSceneDefinder : MonoBehaviour
 
         Save save = GameSaver.GetCurrentSave();
 
+        GetComponent<LoadScreenStarter>().Execute();
+
         if (save == null)
             Level_1.Load();
         else
             SceneManager.LoadScene(save.CurrentScene);
+
     }
 }
