@@ -5,6 +5,7 @@ public class BonusView : MonoBehaviour
     [SerializeField] private GameObject _bonus;
     [SerializeField] private BonusChooser _bonusChooser;
     [SerializeField] private ADShower _aDShower;
+    [SerializeField] private LevelSwitcher _levelSwitcher;
 
     private int _bonusMoney;
 
@@ -13,6 +14,7 @@ public class BonusView : MonoBehaviour
         _aDShower.OnRewardedCallback += () =>
         {
             AddMoney();
+            _levelSwitcher.OnSwitchLevel(0);
         };
     }
 
@@ -21,6 +23,7 @@ public class BonusView : MonoBehaviour
         _aDShower.OnRewardedCallback -= () =>
         {
             AddMoney();
+            _levelSwitcher.OnSwitchLevel(0);
         };
     }
 
