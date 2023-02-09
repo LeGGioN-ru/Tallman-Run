@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class LevelSwitcher : MonoBehaviour
 {
     [SerializeField] private LevelSaver _levelSaver;
-    [SerializeField] private GameSaver _gameSaver;
 
     private readonly string Level = nameof(Level);
     private List<TypedScene> _levels;
@@ -50,7 +49,7 @@ public class LevelSwitcher : MonoBehaviour
         save.LevelNumber++;
         PlayerPrefs.SetString("Save", JsonConvert.SerializeObject(save));
         PlayerPrefs.Save();
-        _gameSaver.Execute();
+        _levelSaver.Execute();
 
         foreach (var level in _levels)
         {

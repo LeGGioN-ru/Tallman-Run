@@ -11,6 +11,9 @@ public class LevelLoader : GameLoader
 
     protected override void Execute(Save save)
     {
+        if (save == null)
+            return;
+
         _playerDeformation.SetStartCharacteristics(save.StartHeight, save.StartWidth);
         _playerMoney.LoadMoney(save.Money);
         _heightUpgrade.LoadLevel(save.HeightLevel);

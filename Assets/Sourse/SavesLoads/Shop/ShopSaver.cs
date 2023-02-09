@@ -8,6 +8,6 @@ public class ShopSaver : GameSaver
 
     public override Save GetSave()
     {
-        return new Save(_skinChanger.CurrentHatIndex, _skinChanger.CurrentColorIndex, _playerMoney.AllMoney, _unlockedSkins.UnlockedButtons);
+        return new Save(_skinChanger.CurrentHatIndex, _skinChanger.CurrentColorIndex ?? -1, _playerMoney.AllMoney, _unlockedSkins.UnlockedButtons);
     }
 }

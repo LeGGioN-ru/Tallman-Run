@@ -7,6 +7,7 @@ public class GameOver : MonoBehaviour
     [SerializeField] private PreFinishTrigger _preFinishTrigger;
     [SerializeField] private FinishTrigger _finishTrigger;
     [SerializeField] private DeformationGameLoser _gameLoser;
+    [SerializeField] private GameSaver _gameSaver;
 
     private void OnEnable()
     {
@@ -30,6 +31,8 @@ public class GameOver : MonoBehaviour
             _finishTrigger.WinGame();
         else
             _losePanel.SetActive(true);
+
+        _gameSaver.Execute();
     }
 
     public void ReastartLevel()

@@ -24,7 +24,7 @@ public class Save
 
     }
 
-    public Save(int hatIndex, int colorIndex, int money, IReadOnlyList<int> unlockedButtons)
+    public Save(int? hatIndex, int? colorIndex, int money, IReadOnlyList<int> unlockedButtons)
     {
         CurrentHatIndex = hatIndex;
         CurrentColorIndex = colorIndex;

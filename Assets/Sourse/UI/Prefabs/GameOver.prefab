@@ -49,6 +49,7 @@ GameObject:
   - component: {fileID: 1492660371609667323}
   - component: {fileID: 1492660371609667325}
   - component: {fileID: 1492660371609667322}
+  - component: {fileID: 8394491975658815604}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -173,6 +174,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8394491975658815604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492660371609667320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Try again
+  FallbackText: 
 --- !u!1 &1492660372084334782
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,6 +333,7 @@ GameObject:
   - component: {fileID: 1492660373064406379}
   - component: {fileID: 1492660373064406381}
   - component: {fileID: 1492660373064406378}
+  - component: {fileID: 8404313045019765055}
   m_Layer: 5
   m_Name: TooBad
   m_TagString: Untagged
@@ -442,6 +458,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8404313045019765055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492660373064406376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf51be86e70d7941bd40914206e4ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: TOO BAD!
+  FallbackText: 
 --- !u!1 &1492660373407270346
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,3 +535,4 @@ MonoBehaviour:
   _preFinishTrigger: {fileID: 0}
   _finishTrigger: {fileID: 0}
   _gameLoser: {fileID: 0}
+  _gameSaver: {fileID: 0}
