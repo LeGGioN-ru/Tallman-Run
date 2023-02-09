@@ -4,9 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+[RequireComponent(typeof(LoadScreenStarter))]
 public class LevelSwitcher : MonoBehaviour
 {
     [SerializeField] private LevelSaver _levelSaver;
+
+    private LoadScreenStarter _loadScreenStarter;
 
     private readonly string Level = nameof(Level);
     private List<TypedScene> _levels;
@@ -41,6 +44,8 @@ public class LevelSwitcher : MonoBehaviour
             new Level_24(),
             new Level_25(),
         };
+
+        _loadScreenStarter = GetComponent<LoadScreenStarter>();
     }
 
     public void OnSwitchLevel(int nextLevel)
@@ -60,6 +65,7 @@ public class LevelSwitcher : MonoBehaviour
             }
         }
 
+        _loadScreenStarter.Execute();
         SceneManager.LoadScene($"Level_{Random.Range(2, _levels.Count)}");
     }
 }

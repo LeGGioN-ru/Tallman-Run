@@ -2,9 +2,15 @@ using IJunior.TypedScenes;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+[RequireComponent(typeof(LoadScreenStarter))]
 public class ShopButton : MonoBehaviour
 {
-    [SerializeField] private LoadScreenStarter _canvasDisabler;
+    private LoadScreenStarter _canvasDisabler;
+
+    private void Start()
+    {
+        _canvasDisabler = GetComponent<LoadScreenStarter>();
+    }
 
     public void OnShopButton()
     {
