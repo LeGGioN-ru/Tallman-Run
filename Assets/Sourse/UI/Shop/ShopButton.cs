@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class ShopButton : MonoBehaviour
 {
+    [SerializeField] private LoadScreenStarter _canvasDisabler;
+
     public void OnShopButton()
     {
         Save save = GameSaver.GetCurrentSave();
@@ -12,6 +14,8 @@ public class ShopButton : MonoBehaviour
             GameSaver.Execute(save);
             save.CurrentScene = SceneManager.GetActiveScene().name;
         }
+
+        _canvasDisabler.Execute();
         shop.Load();
     }
 }
