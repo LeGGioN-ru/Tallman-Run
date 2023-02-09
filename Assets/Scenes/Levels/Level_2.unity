@@ -558,7 +558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerBehaviour: {fileID: 1913948978}
-  _shopButton: {fileID: 0}
+  _shopButton: {fileID: 1274347065}
   _upgrades: {fileID: 1788572124}
 --- !u!1 &160072009
 GameObject:
@@ -3792,6 +3792,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1225691352}
   - component: {fileID: 1225691351}
+  - component: {fileID: 1225691353}
   m_Layer: 0
   m_Name: LeanLocalization
   m_TagString: Untagged
@@ -3839,6 +3840,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1225691353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225691350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2626d94e58f0c4c48a46271b5a7ff0f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _loadScreen: {fileID: 0}
 --- !u!4 &1252036256 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7041579373548327097, guid: 76837b9cd6a0ba24492db96684880153, type: 3}
@@ -3971,6 +3985,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5206541662674897569, guid: 6be4018c116ee734fb8c8bf985d08c23, type: 3}
   m_PrefabInstance: {fileID: 1274347061}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1274347065 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5206541662674897568, guid: 6be4018c116ee734fb8c8bf985d08c23, type: 3}
+  m_PrefabInstance: {fileID: 1274347061}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1296330415
 GameObject:
   m_ObjectHideFlags: 0

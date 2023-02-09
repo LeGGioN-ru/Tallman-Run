@@ -22,6 +22,11 @@ public class PlayerMoney : MonoBehaviour
         MoneyCountChanged?.Invoke(_allMoney);
     }
 
+    private void Update()
+    {
+        MoneyCountChanged?.Invoke(_allMoney);
+    }
+
     public void CollectCoin()
     {
         _allMoney++;

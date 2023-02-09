@@ -591,7 +591,6 @@ GameObject:
   - component: {fileID: 3654507032097643772}
   - component: {fileID: 3654507032097643773}
   - component: {fileID: 3654507032097643768}
-  - component: {fileID: 716995905847538674}
   - component: {fileID: 1913948978}
   - component: {fileID: 8195326942946688711}
   - component: {fileID: 1913948988}
@@ -634,7 +633,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 4.7
   _rotationSpeed: 0.4
-  _rotationSpeedKeyBoard: 1
+  _rotationSpeedKeyBoard: 1.5
   _leftGroundBorder: -4
   _rightGroundBorder: 4
   _eulerYMin: -70
@@ -678,18 +677,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89b1b15ca18f4984b9c4eb69aa586a41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &716995905847538674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3654507032097643713}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ad3c4045de726c4b870f7e0b385b28c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1913948978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -728,6 +715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a57b994588440c4da7f12b0584507e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _deformationColorView: {fileID: 3654507033652842128}
   _hats:
   - {fileID: 919132149041404618}
   - {fileID: 919132148309766666}
@@ -740,9 +728,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 8f9c93a34afd74d4faf53a1152c87c27, type: 2}
   - {fileID: 2100000, guid: f0fbd6384ef6d2d418481324ff576c5d, type: 2}
   _currentHat: {fileID: 0}
-  _currentHatIndex: 0
   _currentColor: {fileID: 0}
-  _currentColorIndex: 0
   _mesh: {fileID: 1110580040667697806}
 --- !u!1 &3654507033652842132
 GameObject:
@@ -762,6 +748,7 @@ GameObject:
   - component: {fileID: 1454431572}
   - component: {fileID: 1454431573}
   - component: {fileID: 1444035838}
+  - component: {fileID: 1938346746}
   m_Layer: 0
   m_Name: Collider
   m_TagString: Untagged
@@ -1085,6 +1072,18 @@ MonoBehaviour:
   _downSound: {fileID: 1454431572}
   _growParticle: {fileID: 1906321305}
   _downParticle: {fileID: 1923079368}
+--- !u!114 &1938346746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3654507033652842132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ad3c4045de726c4b870f7e0b385b28c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4459316298515566190
 GameObject:
   m_ObjectHideFlags: 0

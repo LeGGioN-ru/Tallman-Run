@@ -19,7 +19,7 @@ public class UpgraderView : MonoBehaviour
 
     private void Start()
     {
-        UpdateView();
+        LocalizationDefinder.Instance.Initializeted += UpdateView;
     }
 
     private void OnEnable()
@@ -32,6 +32,8 @@ public class UpgraderView : MonoBehaviour
     {
         _upgrader.Clicked -= OnClicked;
         _upgrader.SaveLoaded -= UpdateView;
+
+        LocalizationDefinder.Instance.Initializeted += UpdateView;
     }
 
     private void UpdateView()
