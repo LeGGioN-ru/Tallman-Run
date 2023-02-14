@@ -663,34 +663,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2094998753}
     m_Modifications:
-    - target: {fileID: 3302773, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3302773, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3302773, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3302773, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3302778, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
       propertyPath: _particlesPoint
       value: 
       objectReference: {fileID: 815156212}
-    - target: {fileID: 3302779, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: _gameSaver
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3302779, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: _levelSaver
-      value: 
-      objectReference: {fileID: 586253169}
     - target: {fileID: 3302779, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
       propertyPath: _playerMoney
       value: 
@@ -703,22 +679,6 @@ PrefabInstance:
       propertyPath: _particlesPoint
       value: 
       objectReference: {fileID: 815156212}
-    - target: {fileID: 1791852240, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1791852240, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1791852240, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1791852240, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1791852245, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
       propertyPath: _particlesPoint
       value: 
@@ -727,14 +687,6 @@ PrefabInstance:
       propertyPath: _playerMoney
       value: 
       objectReference: {fileID: 30157477}
-    - target: {fileID: 4378080429286081267, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: _gameSaver
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4378080429286081267, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: _levelSaver
-      value: 
-      objectReference: {fileID: 586253169}
     - target: {fileID: 4378080429286081267, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
       propertyPath: _playerMoney
       value: 
@@ -831,30 +783,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8480811427969504844, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8480811427969504844, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8480811427969504844, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8480811427969504844, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8480811427969504848, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: _gameSaver
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8480811427969504848, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
-      propertyPath: _levelSaver
-      value: 
-      objectReference: {fileID: 586253169}
     - target: {fileID: 8480811427969504848, guid: 9747fc7204ad9a64a98d2c4a99de3d3e, type: 3}
       propertyPath: _playerMoney
       value: 

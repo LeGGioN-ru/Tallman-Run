@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 
 [RequireComponent(typeof(Upgrader))]
+[RequireComponent(typeof(AudioSource))]
 public class UpgraderView : MonoBehaviour
 {
     [SerializeField] private Transform _particlesPoint;
@@ -10,10 +11,12 @@ public class UpgraderView : MonoBehaviour
     [SerializeField] private TMP_Text _priceText;
     [SerializeField] private TMP_Text _levelText;
 
+    private AudioSource _sound;
     private Upgrader _upgrader;
 
     private void Awake()
     {
+        _sound = GetComponent<AudioSource>();
         _upgrader = GetComponent<Upgrader>();
     }
 
@@ -45,6 +48,7 @@ public class UpgraderView : MonoBehaviour
     private void OnClicked()
     {
         UpdateView();
+        _sound.Play();
         Instantiate(_particles, _particlesPoint.position, Quaternion.identity).Play();
     }
 }
