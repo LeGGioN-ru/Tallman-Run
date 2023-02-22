@@ -594,6 +594,7 @@ GameObject:
   - component: {fileID: 1913948978}
   - component: {fileID: 8195326942946688711}
   - component: {fileID: 1913948988}
+  - component: {fileID: 2032633095}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -730,6 +731,23 @@ MonoBehaviour:
   _currentHat: {fileID: 0}
   _currentColor: {fileID: 0}
   _mesh: {fileID: 1110580040667697806}
+--- !u!114 &2032633095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3654507032097643713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38d78eb7a598b9c439864b729582d957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _newPosition: {x: 6.2, y: 2.33, z: -2.55}
+  _newRotation: {x: 10, y: -58, z: 0}
+  _duration: 1
+  _camera: {fileID: 0}
+  _preFinishTrigger: {fileID: 0}
 --- !u!1 &3654507033652842132
 GameObject:
   m_ObjectHideFlags: 0

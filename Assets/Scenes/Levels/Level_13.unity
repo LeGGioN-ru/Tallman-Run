@@ -1989,6 +1989,14 @@ PrefabInstance:
       propertyPath: _deformationColorView
       value: 
       objectReference: {fileID: 815156216}
+    - target: {fileID: 2032633095, guid: 450a1ce05c29d8b43b7a529ff50e5a44, type: 3}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 963194227}
+    - target: {fileID: 2032633095, guid: 450a1ce05c29d8b43b7a529ff50e5a44, type: 3}
+      propertyPath: _preFinishTrigger
+      value: 
+      objectReference: {fileID: 6514661155587768080}
     - target: {fileID: 3654507032097643713, guid: 450a1ce05c29d8b43b7a529ff50e5a44, type: 3}
       propertyPath: m_Name
       value: Player
