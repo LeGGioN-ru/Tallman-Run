@@ -633,7 +633,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 4.7
   _rotationSpeed: 0.4
-  _rotationSpeedKeyBoard: 1.5
+  _rotationSpeedKeyBoard: 0.25
   _leftGroundBorder: -4
   _rightGroundBorder: 4
   _eulerYMin: -70

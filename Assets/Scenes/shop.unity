@@ -2743,6 +2743,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1285380641}
   - component: {fileID: 1285380642}
+  - component: {fileID: 1285380643}
   m_Layer: 0
   m_Name: PlayerMoney
   m_TagString: Untagged
@@ -2777,6 +2778,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5483e659ec99640408a0b5b7378c4eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1285380643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285380640}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87efa61ebf0a446449ca078f06ea0966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moneyAdd: 250
 --- !u!1 &1337347200
 GameObject:
   m_ObjectHideFlags: 0
