@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class PreFinishTrigger : MonoBehaviour
 {
-    private bool _finished = false;
+    private bool _preFinished = false;
 
-    public bool Finished => _finished;
+    public bool PreFinished => _preFinished;
 
     public Action FinishTriggered;
 
@@ -13,7 +13,7 @@ public class PreFinishTrigger : MonoBehaviour
     {
         if (other.TryGetComponent(out PlayerBehaviour playerBehaviour))
         {
-            _finished = true;
+            _preFinished = true;
             FinishTriggered?.Invoke();
             playerBehaviour.StartPreFinish();
         }

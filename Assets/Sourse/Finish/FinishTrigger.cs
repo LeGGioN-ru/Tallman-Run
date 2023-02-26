@@ -26,6 +26,13 @@ public class FinishTrigger : MonoBehaviour
         }
     }
 
+    public void WinGameWithoutBonus()
+    {
+        GameAnalyticsEvents.Instace.OnLevelFinishGA();
+
+        _continueButton.gameObject.SetActive(true);
+    }
+
     public void WinGame()
     {
         GameAnalyticsEvents.Instace.OnLevelFinishGA();

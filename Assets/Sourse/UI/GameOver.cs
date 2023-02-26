@@ -27,8 +27,8 @@ public class GameOver : MonoBehaviour
 
     private void OnPlayerDead()
     {
-        if (_preFinishTrigger.Finished)
-            _finishTrigger.WinGame();
+        if (_preFinishTrigger.PreFinished)
+            _finishTrigger.WinGameWithoutBonus();
         else
             _losePanel.SetActive(true);
 
